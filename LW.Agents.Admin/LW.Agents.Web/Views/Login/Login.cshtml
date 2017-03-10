@@ -1,0 +1,340 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>湖南徕玩代理登录</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/style-metro.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/default.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="~/css/uniform.default.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/login.css?t=00000000000000000000001" rel="stylesheet" type="text/css" />
+</head>
+<body class="login">
+    <div class="logo">
+        <img src="~/img/logo-xl.png" alt="" style="margin-left:-14px;" />
+    </div>
+    <div class="content" style="padding: 0px;">
+
+        <form class="form-vertical login-form" action="#">
+            <h3 class="form-title">游戏代理中心</h3>
+
+            <div class="alert alert-error hide">
+
+                <button class="close" data-dismiss="alert"></button>
+
+                <span>Enter any username and password.</span>
+
+            </div>
+
+            <div class="control-group">
+
+                <label class="control-label visible-ie8 visible-ie9">账号</label>
+
+                <div class="controls">
+
+                    <div class="input-icon left">
+
+                        <i class="icon-user"></i>
+
+                        <input class="m-wrap placeholder-no-fix" type="text" placeholder="账号" id="username" name="username" value="" />
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="control-group">
+
+                <label class="control-label visible-ie8 visible-ie9">密码</label>
+
+                <div class="controls">
+
+                    <div class="input-icon left">
+
+                        <i class="icon-lock"></i>
+
+                        <input class="m-wrap placeholder-no-fix" type="password" placeholder="密码" id="password" name="password" />
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="control-group">
+
+                <label class="control-label visible-ie8 visible-ie9">验证码</label>
+
+                <div class="controls">
+
+                    <div>
+                        <div class="input-icon left" style="float:left;">
+                            <i class="icon-lock"></i>
+                            <input class="m-wrap placeholder-no-fix" type="text" placeholder="验证码" id="chkcode" name="chkcode" />
+                        </div>
+                        <div style="float:left;">
+                            <img style="height:33px;padding-top: 1px; margin-left: 5px;border-radius: 7px !important;" id="codeImg" alt="点击更换" title="点击更换" src="" />
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="form-actions">
+                <a id="login" class="btn loginBtn">
+
+                </a>
+
+            </div>
+            <div style="margin-top: 20px;margin-bottom: 10px; text-align: center;">
+                <a href="/login/toForgetPassword" style="color: #104d70; text-decoration: underline; font-size: 16px;font-weight: bold;">忘记密码?</a>
+            </div>
+            <p style="color: #FFF; text-align: center;margin-bottom: 0px;">点击登录按钮，即表示同意</p>
+            <p style="text-align: center;color: #FFF;">
+                《
+                <a href="/login/toAgreement" style="color: #FFF; text-decoration: underline;">合作协议</a>》
+            </p>
+        </form>
+        <div class="copyright">
+            2017 © 湖南徕玩网络科技有限公司
+        </div>
+    </div>
+
+    <script src="~/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+    <script src="~/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+    
+    <script src="~/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+
+    <script src="~/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+
+    <script src="~/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+
+    <script src="~/js/jquery.blockui.min.js" type="text/javascript"></script>
+
+    <script src="~/js/jquery.cookie.min.js" type="text/javascript"></script>
+
+    <script src="~/js/jquery.uniform.min.js" type="text/javascript"></script>
+
+
+
+    <script src="~/js/jquery.validate.min.js" type="text/javascript"></script>
+
+
+    <script src="~/js/app.js" type="text/javascript"></script>
+    <script src="~/js/login.js" type="text/javascript"></script>
+    <script src="~/js/bootbox.js" type="text/javascript"></script>
+
+
+    <script>
+        jQuery(document).ready(function () {
+
+            var n = 0;
+            App.init();
+
+            $("#login").on("click", function (e) {
+                var username = $("#username").val();
+                var psw = $("#password").val();
+                var verifycode = $("#chkcode").val();
+                if (username == '' || psw == '' || verifycode == '') {
+                    n++;
+                    bootbox.alert({
+                        buttons: {
+                            ok: {
+                                label: '确认',
+                                className: 'btn-myStyle'
+                            }
+                        },
+                        message: '账号、密码和验证码不能为空!',
+                        callback: function () {
+                            changeCode();
+                            n = 0;
+                        }
+                    });
+                    return false;
+                }
+                var param = {};
+                param.username = username;
+                param.password = psw;
+                param.verifycode = verifycode;
+                var url = "/login/login?t=" + Math.random();
+                var callback = function (data) {
+                    if (data.result == 'AccountErr') {
+                        var oImgs = new Array(
+                            '774017971',
+                            '1228599948'
+                        );
+                        var n = oImgs.length;
+                        var currIndex = Math.floor(Math.random() * n);
+                        bootbox.alert({
+                            buttons: {
+                                ok: {
+                                    label: '确认',
+                                    className: 'btn-myStyle'
+                                }
+                            },
+                            message: '账号或者密码输入有误,重新输入！',
+                            callback: function () {
+                                window.location.href = "/login/toLogin";
+                            }
+                        });
+                        return false;
+                    } else if (data.result == 'chkErr') {
+                        bootbox.alert({
+                            buttons: {
+                                ok: {
+                                    label: '确认',
+                                    className: 'btn-myStyle'
+                                }
+                            },
+                            message: '验证码错误!',
+                            callback: function () {
+                                $("#chkcode").val('');
+                                changeCode();
+                            }
+                        });
+                        return false;
+                    } else if (data.result == 'disableErr') {
+                        bootbox.alert({
+                            buttons: {
+                                ok: {
+                                    label: '确认',
+                                    className: 'btn-myStyle'
+                                }
+                            },
+                            message: '账号未启用,请联系管理员!',
+                            callback: function () { }
+                        });
+                        return false;
+                    } else if (data.result == 'py') {
+                        window.location.href = "/agent/toGameRecharge?v=" + Math.random();
+                    } else {
+                        if (data.isUpdate == 'N') {
+                            window.location.href = "/login/toForceUpdatePassword";
+                        } else {
+                            window.location.href = '/agent/toFriendGiftCard?v=' + Math.random() + '&form=browser';
+                        }
+                    }
+
+                }
+                $.post(url, param, callback, 'json');
+
+            });
+
+            document.onkeydown = function (e) {
+                var ev = document.all ? window.event : e;
+                if (ev.keyCode == 13 && n < 1) {
+                    var username = $("#username").val();
+                    var psw = $("#password").val();
+                    var verifycode = $("#chkcode").val();
+                    if (username == '' || psw == '' || verifycode == '') {
+                        n++;
+                        bootbox.alert({
+                            buttons: {
+                                ok: {
+                                    label: '确认',
+                                    className: 'btn-myStyle'
+                                }
+                            },
+                            message: '账号、密码和验证码不能为空!',
+                            callback: function () {
+                                changeCode();
+                                n = 0;
+                            }
+                        });
+                        return false;
+                    }
+                    var param = {};
+                    param.username = username;
+                    param.password = psw;
+                    param.verifycode = verifycode;
+                    var url = "/login/login?t=" + Math.random();
+                    var callback = function (data) {
+                        if (data.result == 'AccountErr') {
+                            var oImgs = new Array(
+                                '774017971',
+                                '3344055948',
+                                '1228599948',
+                                '3448566565'
+                            );
+                            var n = oImgs.length;
+                            var currIndex = Math.floor(Math.random() * n);
+                            bootbox.alert({
+                                buttons: {
+                                    ok: {
+                                        label: '确认',
+                                        className: 'btn-myStyle'
+                                    }
+                                },
+                                message: '账号或者密码输入有误,重新输入！',
+                                callback: function () {
+                                    window.location.href = "/login/toLogin";
+                                }
+                            });
+                            return false;
+                        } else if (data.result == 'chkErr') {
+                            bootbox.alert({
+                                buttons: {
+                                    ok: {
+                                        label: '确认',
+                                        className: 'btn-myStyle'
+                                    }
+                                },
+                                message: '验证码错误!',
+                                callback: function () {
+                                    $("#chkcode").val('');
+                                    changeCode();
+                                }
+                            });
+                            return false;
+                        } else if (data.result == 'disableErr') {
+                            bootbox.alert({
+                                buttons: {
+                                    ok: {
+                                        label: '确认',
+                                        className: 'btn-myStyle'
+                                    }
+                                },
+                                message: '账号未启用,请联系管理员!',
+                                callback: function () { }
+                            });
+                            return false;
+                        } else if (data.result == 'py') {
+                            window.location.href = "/agent/toGameRecharge?v=" + Math.random();
+                        } else {
+                            if (data.isUpdate == 'N') {
+                                window.location.href = "/login/toForceUpdatePassword";
+                            } else {
+                                window.location.href = '/agent/toFriendGiftCard?v=' + Math.random() + '&form=browser';
+                            }
+                        }
+
+                    }
+                    $.post(url, param, callback, 'json');
+                }
+            }
+
+            function changeCode() {
+                $("#codeImg").attr("src", "/login/getCaptcher?t=" + Math.random());
+            }
+            changeCode();
+            $("#codeImg").bind("click", changeCode);
+
+            $("#change").bind("click", changeCode);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A8D9C7F6-A88C-4E74-A73E-4471A41861AA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LaiWanPay</RootNamespace>
+    <AssemblyName>LaiWanPay</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LitJson">
+      <HintPath>..\dlls\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="QuickMark">
+      <HintPath>..\dlls\QuickMark.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\dlls\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="ThoughtWorks.QRCode">
+      <HintPath>..\dlls\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JtPay\AgentsBindAccounts.aspx" />
+    <Content Include="JtPay\AgentsIsBind.aspx" />
+    <Content Include="JtPay\AgentsNameConfirm.aspx" />
+    <Content Include="JtPay\css\bootstrap.min.css" />
+    <Content Include="JtPay\images\wx.png" />
+    <Content Include="JtPay\images\yl.png" />
+    <Content Include="JtPay\images\zfb.png" />
+    <Content Include="JtPay\js\bootbox.js" />
+    <Content Include="JtPay\js\bootstrap.min.js" />
+    <Content Include="JtPay\js\jquery-1.10.1.min.js" />
+    <Content Include="JtPay\JtpayPost.aspx" />
+    <Content Include="JtPay\MobilePayDefault.aspx" />
+    <Content Include="JtPay\MobilePayTypeChange.aspx" />
+    <Content Include="JtPay\Notify.aspx" />
+    <Content Include="JtPay\PayAddOrder.aspx" />
+    <Content Include="JtPay\PayDefault.aspx" />
+    <Content Include="JtPay\PcPayTypeChange.aspx" />
+    <Content Include="JtPay\Pay\deposit\index.do~lobby=0&amp;type=yb&amp;code=bank.html" />
+    <Content Include="JtPay\Pay\deposit\index.do~lobby=0&amp;type=yb&amp;code=yxdk.html" />
+    <Content Include="JtPay\Pay\deposit\index.do~type=cgame&amp;code=bank.html" />
+    <Content Include="JtPay\Pay\deposit\index.do~type=game&amp;code=bank.html" />
+    <Content Include="JtPay\Pay\deposit\index.do~type=yb&amp;code=bank.html" />
+    <Content Include="JtPay\Pay\help\help.do.html" />
+    <Content Include="JtPay\Pay\help\pact.do.html" />
+    <Content Include="JtPay\Pay\js_v2\cgame_min_v20150826.js" />
+    <Content Include="JtPay\Pay\js_v2\game_bank_min_v20150420.js" />
+    <Content Include="JtPay\Pay\js_v2\game_min_v20150826.js" />
+    <Content Include="JtPay\Pay\js_v2\jquery_v1.8.3.js" />
+    <Content Include="JtPay\Pay\js_v2\JtpayKL.js" />
+    <Content Include="JtPay\Pay\js_v2\main_min_v20150316.js" />
+    <Content Include="JtPay\Pay\js_v2\ya.1.3.1-v0521.js" />
+    <Content Include="JtPay\Pay\js_v2\yb_min_v20150316.js" />
+    <Content Include="JtPay\Pay\pay\AZGZH.aspx" />
+    <Content Include="JtPay\Pay\pay\AZWX.aspx" />
+    <Content Include="JtPay\Pay\pay\azwxtc.aspx" />
+    <Content Include="JtPay\Pay\pay\AZZFB.aspx" />
+    <Content Include="JtPay\Pay\pay\azzfbtc.aspx" />
+    <Content Include="JtPay\Pay\pay\IOSgzh.aspx" />
+    <Content Include="JtPay\Pay\pay\IOSwx.aspx" />
+    <Content Include="JtPay\Pay\pay\IOSzfb.aspx" />
+    <Content Include="JtPay\Pay\pay\JtpayKJ.aspx" />
+    <Content Include="JtPay\Pay\pay\JtpayKL.aspx" />
+    <Content Include="JtPay\Pay\pay\JtpayWX.aspx" />
+    <Content Include="JtPay\Pay\pay\JtpayWY.aspx" />
+    <Content Include="JtPay\Pay\pay\JtpayZFB.aspx" />
+    <Content Include="JtPay\Pay\styles_v2\backimage.png" />
+    <Content Include="JtPay\Pay\styles_v2\bankIcon_v3.jpg" />
+    <Content Include="JtPay\Pay\styles_v2\buttonSprite-0.png" />
+    <Content Include="JtPay\Pay\styles_v2\buttonSprite.png" />
+    <Content Include="JtPay\Pay\styles_v2\collapseArrow.png" />
+    <Content Include="JtPay\Pay\styles_v2\datePicker.png" />
+    <Content Include="JtPay\Pay\styles_v2\gifIcon.png" />
+    <Content Include="JtPay\Pay\styles_v2\JtpayKL.css" />
+    <Content Include="JtPay\Pay\styles_v2\loading.gif" />
+    <Content Include="JtPay\Pay\styles_v2\logo.png" />
+    <Content Include="JtPay\Pay\styles_v2\paymentSprite.png" />
+    <Content Include="JtPay\Pay\styles_v2\popupIcon.png" />
+    <Content Include="JtPay\Pay\styles_v2\questionIcon.png" />
+    <Content Include="JtPay\Pay\styles_v2\selectMark.png" />
+    <Content Include="JtPay\Pay\styles_v2\sidebarBg.png" />
+    <Content Include="JtPay\Pay\styles_v2\sidebarIcon.png" />
+    <Content Include="JtPay\Pay\styles_v2\sidebarMenu.png" />
+    <Content Include="JtPay\Pay\styles_v2\simCheckboxBg.png" />
+    <Content Include="JtPay\Pay\styles_v2\simRadioBg.png" />
+    <Content Include="JtPay\Pay\styles_v2\style_min_v20150917.css" />
+    <Content Include="JtPay\Pay\styles_v2\tabsBg.png" />
+    <Content Include="JtPay\Pay\styles_v2\tabsBg2.png" />
+    <Content Include="JtPay\Return.aspx" />
+    <Content Include="JtPay\UserBindAccounts.aspx" />
+    <Content Include="JtPay\UserIsBind.aspx" />
+    <Content Include="JtPay\UserJtpayPost.aspx" />
+    <Content Include="JtPay\UserPayAddOrder.aspx" />
+    <Content Include="JtPay\UserPayDefault.aspx" />
+    <Content Include="JtPay\UserPayNotify.aspx" />
+    <Content Include="JtPay\UserPayReturn.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WxPay\AgentsNameConfirm.aspx" />
+    <Content Include="WxPay\BindAccounts.aspx" />
+    <Content Include="WxPay\CSS\bootstrap.min.css" />
+    <Content Include="WxPay\images\banner.png" />
+    <Content Include="WxPay\images\laiwanewm.jpg" />
+    <Content Include="WxPay\MobileDefault.aspx" />
+    <Content Include="WxPay\PayAddOrder.aspx" />
+    <Content Include="WxPay\PayValidate.aspx" />
+    <Content Include="WxPay\Scripts\bootbox.js" />
+    <Content Include="WxPay\Scripts\bootstrap.min.js" />
+    <Content Include="WxPay\Scripts\jquery-1.10.1.min.js" />
+    <Content Include="WxPay\ValidateIsBind.aspx" />
+    <None Include="Properties\PublishProfiles\LaiWanPayConfig.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="cert\apiclient_cert.p12" />
+    <Content Include="WxPay\DownloadBillpage.aspx" />
+    <Content Include="WxPay\JsApiPayPage.aspx" />
+    <Content Include="WxPay\MakeQRCode.aspx" />
+    <Content Include="WxPay\MicroPayPage.aspx" />
+    <Content Include="WxPay\NativeNotifyPage.aspx" />
+    <Content Include="WxPay\NativePayPage.aspx" />
+    <Content Include="WxPay\OrderQueryPage.aspx" />
+    <Content Include="WxPay\PayDefault.aspx" />
+    <Content Include="WxPay\ProductPage.aspx" />
+    <Content Include="WxPay\RefundPage.aspx" />
+    <Content Include="WxPay\RefundQueryPage.aspx" />
+    <Content Include="WxPay\ResultNotifyPage.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\AgentsPayment.cs" />
+    <Compile Include="Business\DownloadBill.cs" />
+    <Compile Include="Business\JsApiPay.cs" />
+    <Compile Include="Business\MicroPay.cs" />
+    <Compile Include="Business\NativeNotify.cs" />
+    <Compile Include="Business\NativePay.cs" />
+    <Compile Include="Business\OrderQuery.cs" />
+    <Compile Include="Business\Refund.cs" />
+    <Compile Include="Business\RefundQuery.cs" />
+    <Compile Include="Business\ResultNotify.cs" />
+    <Compile Include="Business\UserPayment.cs" />
+    <Compile Include="Common\WebConfigHelper.cs" />
+    <Compile Include="DBUtility\LogUtils.cs" />
+    <Compile Include="DBUtility\SqlHelper.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\AgentsBindAccounts.aspx.cs">
+      <DependentUpon>AgentsBindAccounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\AgentsBindAccounts.aspx.designer.cs">
+      <DependentUpon>AgentsBindAccounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\AgentsIsBind.aspx.cs">
+      <DependentUpon>AgentsIsBind.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\AgentsIsBind.aspx.designer.cs">
+      <DependentUpon>AgentsIsBind.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\AgentsNameConfirm.aspx.cs">
+      <DependentUpon>AgentsNameConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\AgentsNameConfirm.aspx.designer.cs">
+      <DependentUpon>AgentsNameConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\JtpayPost.aspx.cs">
+      <DependentUpon>JtpayPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\JtpayPost.aspx.designer.cs">
+      <DependentUpon>JtpayPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\MobilePayDefault.aspx.cs">
+      <DependentUpon>MobilePayDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\MobilePayDefault.aspx.designer.cs">
+      <DependentUpon>MobilePayDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\MobilePayTypeChange.aspx.cs">
+      <DependentUpon>MobilePayTypeChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\MobilePayTypeChange.aspx.designer.cs">
+      <DependentUpon>MobilePayTypeChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\Notify.aspx.cs">
+      <DependentUpon>Notify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\Notify.aspx.designer.cs">
+      <DependentUpon>Notify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\PayAddOrder.aspx.cs">
+      <DependentUpon>PayAddOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\PayAddOrder.aspx.designer.cs">
+      <DependentUpon>PayAddOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\PayDefault.aspx.cs">
+      <DependentUpon>PayDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\PayDefault.aspx.designer.cs">
+      <DependentUpon>PayDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\PcPayTypeChange.aspx.cs">
+      <DependentUpon>PcPayTypeChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\PcPayTypeChange.aspx.designer.cs">
+      <DependentUpon>PcPayTypeChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\AZGZH.aspx.cs">
+      <DependentUpon>AZGZH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\AZGZH.aspx.designer.cs">
+      <DependentUpon>AZGZH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\AZWX.aspx.cs">
+      <DependentUpon>AZWX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\AZWX.aspx.designer.cs">
+      <DependentUpon>AZWX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\azwxtc.aspx.cs">
+      <DependentUpon>azwxtc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\azwxtc.aspx.designer.cs">
+      <DependentUpon>azwxtc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\AZZFB.aspx.cs">
+      <DependentUpon>AZZFB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\AZZFB.aspx.designer.cs">
+      <DependentUpon>AZZFB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\azzfbtc.aspx.cs">
+      <DependentUpon>azzfbtc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\azzfbtc.aspx.designer.cs">
+      <DependentUpon>azzfbtc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\IOSgzh.aspx.cs">
+      <DependentUpon>IOSgzh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\IOSgzh.aspx.designer.cs">
+      <DependentUpon>IOSgzh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\IOSwx.aspx.cs">
+      <DependentUpon>IOSwx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\IOSwx.aspx.designer.cs">
+      <DependentUpon>IOSwx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\IOSzfb.aspx.cs">
+      <DependentUpon>IOSzfb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\IOSzfb.aspx.designer.cs">
+      <DependentUpon>IOSzfb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\JtpayKJ.aspx.cs">
+      <DependentUpon>JtpayKJ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\JtpayKJ.aspx.designer.cs">
+      <DependentUpon>JtpayKJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\JtpayKL.aspx.cs">
+      <DependentUpon>JtpayKL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\JtpayKL.aspx.designer.cs">
+      <DependentUpon>JtpayKL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\JtpayWX.aspx.cs">
+      <DependentUpon>JtpayWX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\JtpayWX.aspx.designer.cs">
+      <DependentUpon>JtpayWX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\JtpayWY.aspx.cs">
+      <DependentUpon>JtpayWY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\JtpayWY.aspx.designer.cs">
+      <DependentUpon>JtpayWY.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\JtpayZFB.aspx.cs">
+      <DependentUpon>JtpayZFB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\Pay\pay\JtpayZFB.aspx.designer.cs">
+      <DependentUpon>JtpayZFB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\Return.aspx.cs">
+      <DependentUpon>Return.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\Return.aspx.designer.cs">
+      <DependentUpon>Return.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\UserBindAccounts.aspx.cs">
+      <DependentUpon>UserBindAccounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\UserBindAccounts.aspx.designer.cs">
+      <DependentUpon>UserBindAccounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\UserIsBind.aspx.cs">
+      <DependentUpon>UserIsBind.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\UserIsBind.aspx.designer.cs">
+      <DependentUpon>UserIsBind.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\UserJtpayPost.aspx.cs">
+      <DependentUpon>UserJtpayPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\UserJtpayPost.aspx.designer.cs">
+      <DependentUpon>UserJtpayPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\UserPayAddOrder.aspx.cs">
+      <DependentUpon>UserPayAddOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\UserPayAddOrder.aspx.designer.cs">
+      <DependentUpon>UserPayAddOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\UserPayDefault.aspx.cs">
+      <DependentUpon>UserPayDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\UserPayDefault.aspx.designer.cs">
+      <DependentUpon>UserPayDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\UserPayNotify.aspx.cs">
+      <DependentUpon>UserPayNotify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\UserPayNotify.aspx.designer.cs">
+      <DependentUpon>UserPayNotify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JtPay\UserPayReturn.aspx.cs">
+      <DependentUpon>UserPayReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JtPay\UserPayReturn.aspx.designer.cs">
+      <DependentUpon>UserPayReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\Config.cs" />
+    <Compile Include="lib\CSession.cs" />
+    <Compile Include="lib\Data.cs" />
+    <Compile Include="lib\Exception.cs" />
+    <Compile Include="lib\HttpService.cs" />
+    <Compile Include="lib\Log.cs" />
+    <Compile Include="lib\Notify.cs" />
+    <Compile Include="lib\WxPayApi.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WxPay\AgentsNameConfirm.aspx.cs">
+      <DependentUpon>AgentsNameConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\AgentsNameConfirm.aspx.designer.cs">
+      <DependentUpon>AgentsNameConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\BindAccounts.aspx.cs">
+      <DependentUpon>BindAccounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\BindAccounts.aspx.designer.cs">
+      <DependentUpon>BindAccounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\DownloadBillpage.aspx.cs">
+      <DependentUpon>DownloadBillpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\DownloadBillpage.aspx.designer.cs">
+      <DependentUpon>DownloadBillpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\JsApiPayPage.aspx.cs">
+      <DependentUpon>JsApiPayPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\JsApiPayPage.aspx.designer.cs">
+      <DependentUpon>JsApiPayPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\MakeQRCode.aspx.cs">
+      <DependentUpon>MakeQRCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\MakeQRCode.aspx.designer.cs">
+      <DependentUpon>MakeQRCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\MicroPayPage.aspx.cs">
+      <DependentUpon>MicroPayPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\MicroPayPage.aspx.designer.cs">
+      <DependentUpon>MicroPayPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\MobileDefault.aspx.cs">
+      <DependentUpon>MobileDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\MobileDefault.aspx.designer.cs">
+      <DependentUpon>MobileDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\NativeNotifyPage.aspx.cs">
+      <DependentUpon>NativeNotifyPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\NativeNotifyPage.aspx.designer.cs">
+      <DependentUpon>NativeNotifyPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\NativePayPage.aspx.cs">
+      <DependentUpon>NativePayPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\NativePayPage.aspx.designer.cs">
+      <DependentUpon>NativePayPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\OrderQueryPage.aspx.cs">
+      <DependentUpon>OrderQueryPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\OrderQueryPage.aspx.designer.cs">
+      <DependentUpon>OrderQueryPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\PayAddOrder.aspx.cs">
+      <DependentUpon>PayAddOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\PayAddOrder.aspx.designer.cs">
+      <DependentUpon>PayAddOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\PayDefault.aspx.cs">
+      <DependentUpon>PayDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\PayDefault.aspx.designer.cs">
+      <DependentUpon>PayDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\PayValidate.aspx.cs">
+      <DependentUpon>PayValidate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\PayValidate.aspx.designer.cs">
+      <DependentUpon>PayValidate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\ProductPage.aspx.cs">
+      <DependentUpon>ProductPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\ProductPage.aspx.designer.cs">
+      <DependentUpon>ProductPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\RefundPage.aspx.cs">
+      <DependentUpon>RefundPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\RefundPage.aspx.designer.cs">
+      <DependentUpon>RefundPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\RefundQueryPage.aspx.cs">
+      <DependentUpon>RefundQueryPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\RefundQueryPage.aspx.designer.cs">
+      <DependentUpon>RefundQueryPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\ResultNotifyPage.aspx.cs">
+      <DependentUpon>ResultNotifyPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\ResultNotifyPage.aspx.designer.cs">
+      <DependentUpon>ResultNotifyPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\ValidateIsBind.aspx.cs">
+      <DependentUpon>ValidateIsBind.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\ValidateIsBind.aspx.designer.cs">
+      <DependentUpon>ValidateIsBind.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2110</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2110/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

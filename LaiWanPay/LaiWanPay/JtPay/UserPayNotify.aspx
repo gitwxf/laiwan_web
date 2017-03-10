@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserPayNotify.aspx.cs" Inherits="LaiWanPay.JtPay.UserPayNotify" %>

@@ -1,0 +1,575 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>YY游戏充值中心 - 充值游戏 </title>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../styles_v2/style_min_v20150917.css"/>
+<style id="antiClickjack">body{display:none !important;}</style>
+
+<script type="text/javascript" src="../js_v2/jquery_v1.8.3.js"></script>
+<script src="../js_v2/main_min_v20150316.js"></script>
+<script type="text/javascript" src="../js_v2/ya.1.3.1-v0521.js"></script>
+
+	<script src="../js_v2/game_min_v20150826.js"></script>
+
+
+
+
+
+
+<script type="text/javascript">
+	if (self === top) {
+	    var antiClickjack = document.getElementById("antiClickjack");
+	    antiClickjack.parentNode.removeChild(antiClickjack);
+	} else {
+	    top.location = self.location;
+	}
+
+	dw_start_time = window.dw_start_time = new Date().getTime();
+	dw_YYAnalytics=null;
+	dw_channelJson = window.dw_channelJson = jQuery.parseJSON('[{"id":1,"bkId":"ICBC","name":"工商银行","seq":1,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":2,"bkId":"BOC","name":"中国银行","seq":2,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":3,"bkId":"ABC","name":"农业银行","seq":3,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":4,"bkId":"CCB","name":"建设银行","seq":4,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":5,"bkId":"PSBC","name":"邮政银行","seq":5,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":6,"bkId":"BCOM","name":"交通银行","seq":6,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":7,"bkId":"CMB","name":"招商银行","seq":7,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":8,"bkId":"CIB","name":"兴业银行","seq":8,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":9,"bkId":"CMBC","name":"民生银行","seq":9,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":10,"bkId":"CITIC","name":"中信银行","seq":10,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":11,"bkId":"CEB","name":"光大银行","seq":11,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":12,"bkId":"SPDB","name":"浦发银行","seq":12,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":13,"bkId":"CBHB","name":"渤海银行","seq":13,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":14,"bkId":"SRCB","name":"上海农商","seq":14,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":15,"bkId":"SHB","name":"上海银行","seq":15,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":16,"bkId":"BEA","name":"东亚银行","seq":16,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":17,"bkId":"PAB","name":"平安银行","seq":17,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":18,"bkId":"NJCB","name":"南京银行","seq":18,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":19,"bkId":"NBCB","name":"宁波银行","seq":19,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":20,"bkId":"BJRCB","name":"北京农商","seq":20,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":21,"bkId":"HZB","name":"杭州银行","seq":21,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":22,"bkId":"HXB","name":"华夏银行","seq":22,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":23,"bkId":"HSB","name":"徽商银行","seq":23,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":24,"bkId":"GZCB","name":"广州银行","seq":24,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":1,"isIF":0,"muC":"bank"},{"id":25,"bkId":"GDB","name":"广发银行","seq":25,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":26,"bkId":"BOB","name":"北京银行","seq":26,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":27,"bkId":"CZB","name":"浙商银行","seq":27,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"bank"},{"id":30,"bkId":"","name":"支付宝","seq":28,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":1,"muC":"bank"},{"id":29,"bkId":"","name":"易宝支付","seq":29,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":1,"isIF":1,"muC":"bank"},{"id":48,"bkId":"","name":"扫码支付","seq":29,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":1,"muC":"bank1"},{"id":28,"bkId":"","name":"快钱支付","seq":30,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":1,"muC":"bank"},{"id":31,"bkId":"","name":"神州行卡支付","seq":31,"cnN":"元","rate":0.95,"myL":"47,95","cnC":"47:50,95:100","isC":0,"isIF":0,"muC":"szx"},{"id":32,"bkId":"","name":"联通卡支付","seq":32,"cnN":"元","rate":0.95,"myL":"47,95","cnC":"47:50,95:100","isC":0,"isIF":0,"muC":"lt"},{"id":33,"bkId":"","name":"移动手机短信支付","seq":33,"cnN":"元","rate":0.50,"myL":"1,5,10,15","cnC":"1:2,5:10,10:20,15:30","isC":1,"isIF":0,"muC":"dx"},{"id":34,"bkId":"","name":"天宏卡支付","seq":34,"cnN":"元","rate":0.90,"myL":"0.9,4.5,9,13.5,18,27,45,90,180,270,450","cnC":"0.9:1,4.5:5,9:10,13.5:15,18:20,27:30,45:50,90:100,180:200,270:300,450:500","isC":0,"isIF":0,"muC":"th"},{"id":35,"bkId":"","name":"骏卡支付","seq":35,"cnN":"元","rate":0.90,"myL":"9,27,45,90,180,270,450,900","cnC":"9:10,27:30,45:50,90:100","isC":0,"isIF":0,"muC":"jk"},{"id":36,"bkId":"","name":"Y币支付","seq":36,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"yb"},{"id":37,"bkId":"","name":"盛大一卡通","seq":37,"cnN":"元","rate":0.90,"myL":"4.5,9,13.5,22.5,27,31.5,40.5,45,90","cnC":"4.5:5,9:10,13.5:15,22.5:25,27:30,31.5:35,40.5:45,45:50,90:100","isC":0,"isIF":0,"muC":"sd"},{"id":38,"bkId":"","name":"网易一卡通","seq":38,"cnN":"元","rate":0.85,"myL":"8.5,12.5,17,25.5,42.5","cnC":"8.5:10,12.5:15,17:20,25.5:30,42.5:50","isC":0,"isIF":0,"muC":"wy"},{"id":39,"bkId":"","name":"全国电话支付V币","seq":39,"cnN":"元","rate":0.50,"myL":"5,10,15,25,50","cnC":"5:10,10:20,15:30,25:50,50:100","isC":0,"isIF":0,"muC":"vb"},{"id":40,"bkId":"","name":"WAP支付宝","seq":40,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":1,"isIF":0,"muC":"wap"},{"id":41,"bkId":"","name":"WAP银联","seq":41,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"wap"},{"id":42,"bkId":"","name":"WAP神州行","seq":42,"cnN":"元","rate":0.90,"myL":"47,95","cnC":"47:50,95:100","isC":1,"isIF":0,"muC":"wap"},{"id":43,"bkId":"","name":"WAP_Y币","seq":43,"cnN":"元","rate":1.00,"myL":"*","cnC":null,"isC":0,"isIF":0,"muC":"wap"},{"id":44,"bkId":" ","name":"手机短信支付","seq":44,"cnN":"元","rate":0.50,"myL":"1,5,10,15","cnC":"1:2,5:10,10:20,15:30","isC":0,"isIF":0,"muC":"dx"},{"id":45,"bkId":"","name":"天下通一卡通","seq":45,"cnN":"元","rate":0.90,"myL":"9,27,45,90","cnC":"9:10,27:30,45:50,90:100","isC":0,"isIF":0,"muC":"txt"},{"id":46,"bkId":"","name":"WAP移动话费","seq":46,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"wap"},{"id":47,"bkId":"","name":"WAP支付宝","seq":47,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"wap"},{"id":49,"bkId":"","name":"WAP微信","seq":49,"cnN":"元","rate":1.00,"myL":"*","cnC":"","isC":0,"isIF":0,"muC":"wap"}]');
+	dw_gameJson = window.dw_gameJson = jQuery.parseJSON('[{"id":"AHTL","name":"暗黑屠龙","ftPY":"AHTL","type":1,"ndGR":1,"geCN":"元宝","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"AHXYJ","name":"暗黑西游记","ftPY":"AHXYJ","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"AJ2","name":"傲剑2","ftPY":"AJ","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"ASJCT","name":"傲世九重天","ftPY":"ASJCT","type":1,"ndGR":1,"geCN":"紫晶","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"AS","name":"傲视天地","ftPY":"ASTD","type":1,"ndGR":0,"geCN":"金币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"BFX","name":"冰封侠","ftPY":"BFX","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"BHPHS","name":"冰火破坏神","ftPY":"BHPHS","type":1,"ndGR":0,"geCN":"金币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"BLJX","name":"部落觉醒","ftPY":"BLJX","type":1,"ndGR":0,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"BLSWZ","name":"部落守卫战","ftPY":"BLSWZ","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"FISH","name":"捕鱼达人","ftPY":"BYDR","type":1,"ndGR":1,"geCN":"K点","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"BZTX","name":"百战天下","ftPY":"BZTX","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"CBZZ","name":"赤壁之战","ftPY":"CBZZ","type":3,"ndGR":0,"geCN":"金元","rate":10.00,"cp":"6hgame","useCp":1,"cpN":"仟游账号"},{"id":"CLX","name":"楚留香新传","ftPY":"CLXXC","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"CQBY","name":"传奇霸业","ftPY":"CQBY","type":1,"ndGR":1,"geCN":"元宝","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"CQSS","name":"传奇盛世","ftPY":"CQSS","type":1,"ndGR":0,"geCN":"元宝","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"CQWS","name":"传奇无双","ftPY":"CQWS","type":1,"ndGR":0,"geCN":"元宝","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"DBTX","name":"独步天下","ftPY":"DBTX","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"DDT","name":"弹弹堂","ftPY":"DDT","type":1,"ndGR":1,"geCN":"弹弹堂点券","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"DHD","name":"大皇帝","ftPY":"DHD","type":1,"ndGR":1,"geCN":"黄金","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"DJJ","name":"大将军","ftPY":"DJJ","type":1,"ndGR":1,"geCN":"黄金","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"DJWY","name":"刀剑物语","ftPY":"DJWY","type":1,"ndGR":0,"geCN":"彩钻","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"DNTG","name":"大闹天宫","ftPY":"DNTG","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"DPCQ","name":"斗破苍穹2","ftPY":"DPCQ2","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"DPQK","name":"斗破乾坤","ftPY":"DPQK","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"DTSZJ","name":"大天使之剑","ftPY":"DTSZJ","type":1,"ndGR":1,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"DTWS2","name":"大唐无双2","ftPY":"DTWS2","type":3,"ndGR":0,"geCN":"点数","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"DXZ","name":"大侠传","ftPY":"DXC","type":1,"ndGR":1,"geCN":"黄金","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"YYTEX","name":"德州扑克","ftPY":"DZPK","type":1,"ndGR":1,"geCN":"达人币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"ZS","name":"大战神","ftPY":"DZS","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"FBDL","name":"风暴大陆","ftPY":"FBDL","type":1,"ndGR":0,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"YYFBSD","name":"佛本是道","ftPY":"FBSD","type":1,"ndGR":0,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"FRXZ2","name":"凡人修真2","ftPY":"FRXZ2","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"FSGJ","name":"风色轨迹","ftPY":"FSGJ","type":1,"ndGR":1,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"FTX","name":"范特西篮球经理","ftPY":"FTXLQJL","type":1,"ndGR":0,"geCN":"饭卡","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"FTX2","name":"范特西篮球经理2","ftPY":"FTXLQJL2","type":1,"ndGR":0,"geCN":"饭卡","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"FTZS","name":"封天战神","ftPY":"FTZS","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"FYWS","name":"风云无双","ftPY":"FYWS","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"GCLD","name":"攻城掠地","ftPY":"GCLD","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"GJQT","name":"古剑奇谭","ftPY":"GJQT","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"GJQX","name":"古剑奇侠","ftPY":"GJQX","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"GSHX","name":"盖世豪侠","ftPY":"GSHX","type":3,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"YYHAZG","name":"黑暗之光","ftPY":"HAZG","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"HDZY","name":"混沌战域","ftPY":"HDZY","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"HJDT","name":"核金弹头","ftPY":"HJDT","type":1,"ndGR":1,"geCN":"点券","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"HJXD","name":"合金行动","ftPY":"HJXD","type":1,"ndGR":0,"geCN":"金币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"HJZZ","name":"核金战争","ftPY":"HJZZ","type":1,"ndGR":0,"geCN":"点卷","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"HMFY","name":"汉末风云","ftPY":"HMFY","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"HQG","name":"花千骨","ftPY":"HQG","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"HSTX","name":"横扫天下","ftPY":"HSTX","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"LDHD","name":"盒子大皇帝","ftPY":"HZDHD","type":1,"ndGR":1,"geCN":"黄金","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"LHAZG","name":"盒子黑暗之光","ftPY":"HZHAZG","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"HYMHJ","name":"盒子莽荒纪","ftPY":"HZMHJ","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"LNSLM","name":"盒子女神联盟","ftPY":"HZNSLM","type":1,"ndGR":1,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"LZWX","name":"盒子醉武侠","ftPY":"HZZWX","type":1,"ndGR":1,"geCN":"金子","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"JDJ","name":"九鼎记","ftPY":"JDJ","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"JJDLD","name":"街机大乱斗","ftPY":"JJDLD","type":1,"ndGR":0,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"CYSG","name":"街机三国","ftPY":"JJSG","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"JJWX","name":"街机武侠","ftPY":"JJWX","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"JLC","name":"九龙朝","ftPY":"JLC","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"JIANGS","name":"将神","ftPY":"JS","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"JXTCJ","name":"九星天辰诀","ftPY":"JXTCJ","type":1,"ndGR":0,"geCN":"影金","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"JZZ","name":"九州志","ftPY":"JZZ","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"KKNSLM","name":"快快女神联盟","ftPY":"KKNSLM","type":1,"ndGR":1,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"KKDDZ","name":"快快棋牌","ftPY":"KKQP","type":1,"ndGR":0,"geCN":"达人币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"KSHENQU","name":"快快神曲","ftPY":"KKSQ","type":1,"ndGR":1,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"KTPD2","name":"开天辟地2","ftPY":"KTPD2","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"KTTL","name":"开天屠龙","ftPY":"KTTL","type":1,"ndGR":0,"geCN":"元宝","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"LCTQ","name":"龙城铁骑","ftPY":"LCTQ","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"LUNHUI","name":"精深轮回","ftPY":"LH","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"LHZS","name":"烈火战神","ftPY":"LHZS","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"LONGJ","name":"龙将","ftPY":"LJ","type":1,"ndGR":0,"geCN":"金币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"LMFJ","name":"龙门飞甲","ftPY":"LMFJ","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"LPJT","name":"龙破九天","ftPY":"LPJT","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"LT2","name":"雷霆之怒","ftPY":"LTZN","type":1,"ndGR":0,"geCN":"元宝","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"LIEYAN","name":"烈焰","ftPY":"LY","type":1,"ndGR":1,"geCN":"元宝","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"LYB","name":"琅琊榜","ftPY":"LYB","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"LYOL","name":"灵域Online","ftPY":"LYONLINE","type":3,"ndGR":1,"geCN":"金子","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"LZTX","name":"龙战天下","ftPY":"LZTX","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"MFTT","name":"魔法天堂","ftPY":"MFTT","type":1,"ndGR":0,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"MHFX","name":"梦幻飞仙","ftPY":"MHFX","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"MHJ","name":"莽荒纪","ftPY":"MHJ","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"MJD","name":"名剑道","ftPY":"MJD","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"MLJ","name":"魔龙诀","ftPY":"MLJ","type":1,"ndGR":1,"geCN":"元宝","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"MLXT","name":"魔力学堂","ftPY":"MLXT","type":1,"ndGR":0,"geCN":"点数","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"RXLZ2","name":"魔龙之戒","ftPY":"MLZJ","type":1,"ndGR":0,"geCN":"金币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"MRSG","name":"美人三国","ftPY":"MRSG","type":3,"ndGR":0,"geCN":"金子","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"MXQY","name":"冒险契约","ftPY":"MXQY","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"MYCS","name":"魅影传说","ftPY":"MYCS","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"NSLM","name":"女神联盟","ftPY":"NSLM","type":1,"ndGR":1,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"QFZ","name":"乔峰传","ftPY":"QFC","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"QIJI","name":"奇迹归来","ftPY":"QJGL","type":1,"ndGR":0,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"QJGL","name":"奇迹来了","ftPY":"QJLL","type":1,"ndGR":1,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"QMDT","name":"全民倒塔","ftPY":"QMDT","type":1,"ndGR":0,"geCN":"金币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"QMR","name":"秦美人","ftPY":"QMR","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"QISHA","name":"七杀","ftPY":"QS","type":1,"ndGR":1,"geCN":"元宝","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"RXHZW","name":"热血海贼王","ftPY":"RXHZW","type":1,"ndGR":1,"geCN":"金币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"RXJJ","name":"热血街机","ftPY":"RXJJ","type":1,"ndGR":0,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"RXSC","name":"热血沙城","ftPY":"RXSC","type":1,"ndGR":1,"geCN":"元宝","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"RXTL","name":"热血屠龙","ftPY":"RXTL","type":1,"ndGR":0,"geCN":"元宝","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"RXZJ","name":"热血战纪","ftPY":"RXZJ","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"SCTX","name":"神创天下","ftPY":"SCTX","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"SMSG","name":"三分天下","ftPY":"SFTX","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"SGH","name":"三国魂","ftPY":"SGH","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"SGS","name":"三国杀","ftPY":"SGS","type":1,"ndGR":0,"geCN":"点券","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"SGWS","name":"三国武神","ftPY":"SGWS","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"SGZS","name":"上古战神","ftPY":"SGZS","type":3,"ndGR":0,"geCN":"金币","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"SJECL","name":"书剑恩仇录","ftPY":"SJECL","type":1,"ndGR":1,"geCN":"银两","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"SJTL","name":"神将屠龙","ftPY":"SJTL","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"SMYY","name":"神魔三国","ftPY":"SMSG","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"SMXJ","name":"神魔仙界","ftPY":"SMXJ","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"SMZT","name":"神魔遮天","ftPY":"SMZT","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"SHENQU","name":"神之契约","ftPY":"SQ","type":1,"ndGR":1,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"SSJJ","name":"生死狙击","ftPY":"SSJJ","type":1,"ndGR":1,"geCN":"金币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"SSSG2","name":"盛世三国2","ftPY":"SSSG2","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"SWJT","name":"神武九天","ftPY":"SWJT","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"SXD","name":"神仙道","ftPY":"SXD","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"SY","name":"深渊","ftPY":"SY","type":1,"ndGR":0,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"SZ","name":"神战","ftPY":"SZ","type":1,"ndGR":0,"geCN":"金币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"TGZT","name":"太古遮天","ftPY":"TGZT","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"KKTHYJ","name":"桃花源记","ftPY":"THYJ","type":3,"ndGR":1,"geCN":"乐游币","rate":1.00,"cp":"","useCp":0,"cpN":""},{"id":"TJXS","name":"天将雄师","ftPY":"TJXS","type":1,"ndGR":0,"geCN":"金币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"TKYX","name":"坦克英雄","ftPY":"TKYX","type":1,"ndGR":1,"geCN":"金币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"TSSJ","name":"天书世界","ftPY":"TSSJ","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"WS","name":"万世","ftPY":"WS","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"WSSB","name":"无上神兵","ftPY":"WSSB","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"WSSG","name":"无双三国","ftPY":"WSSG","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"WYCQ","name":"武易传奇","ftPY":"WYCQ","type":1,"ndGR":1,"geCN":"元宝","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"WUZUN","name":"武尊","ftPY":"WZ","type":1,"ndGR":1,"geCN":"元宝","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"WZZG","name":"王者之光","ftPY":"WZZG","type":1,"ndGR":0,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"WZZH","name":"王者召唤","ftPY":"WZZH","type":1,"ndGR":1,"geCN":"金币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"XAJT","name":"天降神兵","ftPY":"XAJT","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"XDDT","name":"新弹弹堂","ftPY":"XDDT","type":1,"ndGR":1,"geCN":"点券","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"XDZPK","name":"新德州扑克","ftPY":"XDZPK","type":1,"ndGR":1,"geCN":"达人币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"FY","name":"新风云","ftPY":"XFY","type":3,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"XJQB","name":"仙境奇兵","ftPY":"XJQB","type":1,"ndGR":0,"geCN":"神钻","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"XJWY","name":"仙境物语","ftPY":"XJWY","type":1,"ndGR":0,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"XLYB","name":"新琅琊榜","ftPY":"XLYB","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"XSQST","name":"像素骑士团","ftPY":"XSQST","type":1,"ndGR":0,"geCN":"血钻","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"XXD","name":"仙侠道","ftPY":"XXD","type":1,"ndGR":1,"geCN":" 元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"XXJOL","name":"新仙剑","ftPY":"XXJ","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"XYFM","name":"西游伏魔","ftPY":"XYFM","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"YSSJ","name":"亚瑟神剑","ftPY":"YSSJ","type":1,"ndGR":1,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"YUTIAN","name":"御天","ftPY":"YT","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"YXYZ","name":"英雄远征","ftPY":"YXYZ","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"DDZ","name":"YY棋牌","ftPY":"YYQP","type":1,"ndGR":0,"geCN":"达人币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"TOUCH","name":"YY炫舞","ftPY":"YYXW","type":1,"ndGR":1,"geCN":"R币","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"ZGZN","name":"战国之怒","ftPY":"ZGZN","type":1,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"ZLBT","name":"战龙兵团","ftPY":"ZLBT","type":1,"ndGR":0,"geCN":"金币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"ZLCQ","name":"斩龙传奇","ftPY":"ZLCQ","type":1,"ndGR":0,"geCN":"元宝","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"ZLSG","name":"真龙三国","ftPY":"ZLSG","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"ZSGLW","name":"真三国乱舞","ftPY":"ZSGLW","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"ZSHH","name":"诸神黄昏","ftPY":"ZSHH","type":1,"ndGR":0,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"ZSJ","name":"战神诀","ftPY":"ZSJ","type":1,"ndGR":1,"geCN":"元宝","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"ZHUSHEN","name":"诸神世界","ftPY":"ZSSJ","type":1,"ndGR":1,"geCN":"金币","rate":100.00,"cp":"","useCp":0,"cpN":""},{"id":"ZSZS","name":"众神之神","ftPY":"ZSZS","type":1,"ndGR":1,"geCN":"钻石","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"ZTT","name":"战天堂","ftPY":"ZTT","type":1,"ndGR":1,"geCN":"金币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"ZWX","name":"醉武侠","ftPY":"ZWX","type":1,"ndGR":1,"geCN":"金子","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"ZXY","name":"战西游","ftPY":"ZXY","type":3,"ndGR":0,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"YYZXY","name":"醉西游","ftPY":"ZXY","type":1,"ndGR":1,"geCN":"元宝","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"FF14","name":"最终幻想14","ftPY":"ZZHX","type":3,"ndGR":0,"geCN":"秒","rate":6000.00,"cp":"","useCp":0,"cpN":""},{"id":"ZZSF","name":"征战四方","ftPY":"ZZSF","type":1,"ndGR":1,"geCN":"金币","rate":10.00,"cp":"","useCp":0,"cpN":""},{"id":"ZZSF2","name":"征战四方2","ftPY":"ZZSF2","type":1,"ndGR":1,"geCN":"金币","rate":10.00,"cp":"","useCp":0,"cpN":""}]');
+	dw_activityJson = window.dw_activityJson = jQuery.parseJSON('{"activity":[],"choices":{}}');
+	dw_showChengka = window.dw_showChengka = '0';
+	dw_passport = window.dw_passport = '';
+	dw_inputUser = window.dw_inputUser = decodeURIComponent("");
+	dw_role = window.dw_role = decodeURIComponent("");
+	dw_needLogin = window.dw_needLogin = '';
+	dw_defaultAmount = window.dw_defaultAmount = '100';
+	dw_chlIds = window.dw_chlIds = jQuery.parseJSON('[]');
+	var t_type='game';
+	var t_code='bank';
+	if(t_type==""){
+		t_type='';
+		t_code='';
+	}
+	dw_code = window.dw_code = t_code;
+	dw_type = window.dw_type = t_type;
+	dw_minAmount = window.dw_minAmount = '10';
+	var t_lobby1='0';
+	var t_lobby2='0';
+	var lobby='0';
+	if('1'==t_lobby1||'1'==t_lobby2){
+		lobby='1';
+	}
+	dw_lobby = window.dw_lobby = lobby;
+	dw_gameId = window.dw_gameId = ''.toUpperCase();
+	dw_serverId = window.dw_serverId = ''.toLowerCase();
+	if (dw_gameJson != null) {
+		var gameMap = {};
+		jQuery(dw_gameJson).each(function(index, value) {
+			gameMap[value["id"]] = value;
+		});
+		window.gameMap = gameMap;
+	}
+
+	function getGame(gameId) {
+		var gameMap = window.gameMap;
+		if (gameMap == null) {
+			return null;
+		}
+		return gameMap[gameId];
+	}
+	
+	function sendStat(eid){
+		sendSimpleStat(eid);
+		sendSimpleStat("/"+dw_type+"/"+dw_code+eid);
+	}
+	
+	function sendSimpleStat(eid){
+		try{
+			data = { eid : eid, pro : "gpay"};
+			if(dw_YYAnalytics!=null){
+				dw_YYAnalytics.reportProductEvent(data,null);
+			}
+		}catch(e){};
+	}
+	
+	function sendChengkaStat(){
+		sendSimpleStat("CHENGKA");
+	}
+
+	jQuery(window).load(function() {
+		try{
+			var ya = new YA.report.YYAnalytics('gpay',dw_passport,{"error_retry" : false});
+			dw_YYAnalytics=ya;
+			if(dw_code=="bank"){
+				var dur=toInt(new Date().getTime()-window.dw_start_time);
+				var from = YA.utils.Cookie.getCookie('from');
+				if(isEmpty(from)){
+					from="FROM_WEBYYGAME";
+				}
+				var data = {pro : "gpay",cha : "gpay",rso : from,dur : dur};
+				ya.reportProductStartUp(data,null);
+				sendSimpleStat("ACCESS");
+			}
+		}catch(e){};
+	});
+	
+</script>
+</head>
+
+
+<body>
+
+
+<!-- Copyright � 2005. Spidersoft Ltd -->
+<style>
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+A.info:hover    {color:green;background:transparent;text-decoration:underline}
+</style>
+<div style='BORDER: 1px solid #DCE6F4; MARGIN-TOP: 20px; MARGIN-BOTTOM: 20px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 5px; PADDING: 5px; BACKGROUND-COLOR: #eef8ff;line-height:180%; COLOR: #000000; font-family: Arial; font-size: 8pt; width=100%; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr="#FFFFFFFF", EndColorStr="#F2F5FAFF");'>
+This page was saved using <a class="applink" href="http://www.spidersoft.com"><b>WebZIP 7.0.3.1030</b></a> <a class="applink" href="http://www.spidersoft.com"><b>offline browser</b></a>  (Unregistered) on  10/21/15 11:38:56.<br>
+<b>Address:</b> <a class="info" href="https://gpay.duowan.com/deposit/index.do?type=game&code=bank">https://gpay.duowan.com/deposit/index.do?type=game&code=bank</a><br>
+<b>Title:</b> YY游戏充值中心 - 充值游戏 &nbsp;&bull;&nbsp; <b>Size:</b> 44429<br></div>
+<!-- /Copyright � 2005. Spidersoft Ltd -->
+
+
+	
+
+
+    <div id="nav">
+        <div class="bd">
+            <h1>YY游戏充值中心</h1>
+            <ul>
+            	
+				<li><a href="javascript:udbLogin('','');" title="我的帐户" id="tab_account">我的帐户</a></li>
+				
+				
+                <li><a href="index.do~type=yb&code=bank.html" title="充值Y币" id="tab_yb">充值Y币</a></li>
+                <li><a href="index.do~type=game&code=bank.html" title="充值游戏" id="tab_game">充值页游</a></li>
+                <li><a href="index.do~type=cgame&code=bank.html" title="充值游戏" id="tab_cgame">充值端游</a></li>
+                <li><a href="http://vip.yy.com/vip/vmall2?type=year" title="充值会员" target="_blank">充值会员</a></li>
+                <li><a href="../help/help.do.html"  id="tab_help" target="_blank" title="充值帮助">充值帮助</a></li>
+            </ul>
+            <div class="userInfo" style="display: none;" id="userLoginDiv">
+                <img src="../styles_v2/avatar.jpg" class="avatar" /><span id="userNameSpan"></span>，<a href="javascript:udbLogout();">退出！</a>
+            </div>
+            <div class="userInfo" style="display: none;" id="userNoLoginDiv">
+            	欢迎你，<a href="javascript:udbLogin('game','bank');">请登录!</a>
+            </div>
+        </div>
+    </div>
+
+
+<script type="text/javascript" src="../../res.udb.duowan.com/lgn/js/oauth/udbsdk/pcweb/udb.sdk.pcweb.popup.min.js" ></script>
+<script type="text/javascript">
+var httpHead="https";
+if(window.location.protocol=="http:"){
+	httpHead="http";
+}
+
+function writeCookie(url,redirectUrl){	
+	UDB.sdk.PCWeb.writeCrossmainCookieWithCallBack(url,function (){top.window.location=redirectUrl;});
+}
+
+jQuery(document).ready(function(){
+	var passport=window.dw_passport;
+	if(jQuery.trim(passport)!=""){
+		jQuery("#userLoginDiv").show();
+		jQuery("#userNoLoginDiv").hide();
+		jQuery("#userNameSpan").text(passport);
+	}else{
+		jQuery("#userNoLoginDiv").show();
+		jQuery("#userLoginDiv").hide();
+		jQuery("#userNameSpan").text("");
+	}
+	
+	var type=window.dw_type;
+	var code=window.dw_code;
+	if(type==''&&code==''){
+		jQuery("#tab_account").parent().addClass("current").siblings("li").removeClass("current");
+	}else {
+		jQuery("#tab_"+type).parent().addClass("current").siblings("li").removeClass("current");
+	}
+});
+
+function sdkLogin(){
+	var type=jQuery.trim(jQuery("#type").val());
+	var code=jQuery.trim(jQuery("#code").val());
+	udbLogin(type,code);
+}
+
+function udbLogin(type,code){	
+	
+	var preLoginUrl=httpHead+'://gpay.duowan.com/user/preLogin.do';
+	var loginUrl=httpHead+'://gpay.duowan.com/user/login.do?'+getUrlParams(type,code);
+	var cancelLoginUrl=httpHead+'://gpay.duowan.com/user/cancelLogin.do';
+	UDB.sdk.PCWeb.popupOpenLgn(preLoginUrl,loginUrl,cancelLoginUrl);
+	
+}
+
+function getUrlParams(type,code){
+	var lobby=window.dw_lobby;
+	var gameId = jQuery("#gameId").val(), serverId = jQuery("#serverId").val(), user = jQuery("#passport").val(),accountType = jQuery("#accountType").val();
+	var role=jQuery("#gameRoleId").val();
+	var amount = "";
+	if(jQuery.trim(type).toLowerCase()!='yb'){
+		amount=jQuery("#oriAmount").val();
+	}
+	if (jQuery.trim(gameId) != "") {
+		gameId = "&gameId=" + gameId;
+	}else{
+		gameId="";
+	}
+	if (jQuery.trim(serverId) != "") {
+		serverId = "&serverId=" + serverId;
+	}else{
+		serverId="";
+	}
+	if (jQuery.trim(accountType) != "") {
+		accountType = "&accountType=" + accountType;
+	}else{
+		accountType="";
+	}
+	if (jQuery.trim(role) != "") {
+		role = "&role=" + encodeURIComponent(role);
+	}else{
+		role="";
+	}
+	if (jQuery.trim(amount) != "") {
+		amount = "&amount=" + amount;
+	}else{
+		amount="";
+	}
+	if (jQuery.trim(user) != "") {
+		user = "&user=" + encodeURIComponent(user);
+	}else{
+		user="";
+	}
+	return "lobby=" + lobby + "&type=" + type + "&code=" + code + gameId + serverId + user + accountType + amount + role;
+}
+
+function udbLogout(){	
+	$.ajax({
+		type: "POST",
+		async:false,//同步
+		url: httpHead+"://"+window.location.host+"/user/preLogout.do",
+		contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+		dataType: "text",
+		success: function(data, textStatus) {
+			UDB.sdk.PCWeb.deleteCrossmainCookieWithCallBack(data,logoutForward);
+		},
+		error: function(XMLHttpRequest, textStatus, errorThrown) {
+		}
+	});	
+}
+
+function logoutForward(){
+	top.window.location = httpHead+"://"+window.location.host+"/user/logout.do";
+}
+</script>
+
+	<div class="container clearfix">
+		
+
+
+
+
+
+
+
+
+<div id="sidebar">
+	<ul>
+		<li><p class='payment-s1' data='bank' title='网银支付' onclick='changeMethod(this);'>网银支付</p></li>
+<li><p class='payment-s2' data='yb' title='Y币支付' onclick='changeMethod(this);'>Y币支付</p></li>
+<li><p class='payment-s3' data='yxdk' title='游戏点卡' onclick='changeMethod(this);'>游戏点卡</p></li>
+<li><p class='payment-s4' data='sjczk' title='手机充值卡' onclick='changeMethod(this);'>手机充值卡</p></li>
+<li><p class='payment-s5' data='dhvb' title='电话V币支付' onclick='changeMethod(this);'>电话V币支付</p></li>
+<li><p class='payment-s6' data='dx' title='手机短信支付' onclick='changeMethod(this);'>手机短信支付</p></li>
+
+	</ul>
+</div>
+<script type="text/javascript">
+	function changeMethod(obj) {
+		var data = jQuery(obj).attr("data");
+		var type = 'game';
+		var code = 'bank';
+		var lobby = window.dw_lobby;
+		if (data == code) {
+			return;
+		}
+		if (data == 'yb' && window.dw_passport == '') {
+			udbLogin(type, 'yb');
+			return;
+		}
+		top.window.location = "/deposit/index.do?"+getUrlParams(type,data);
+	}
+
+	jQuery(document).ready(function() {
+		var code = 'bank';
+		var obj=jQuery("#sidebar").find("p[data=" + code + "]").parent();
+		obj.addClass("current").siblings("p").removeClass("current");
+	});
+</script>
+		<div id="main">
+			<div class="payment">
+				
+	
+
+<input type="hidden" id="oriGameCoin" />
+<input type="hidden" id="gameCoin" />
+<input type="hidden" id="userYbAmount" />
+<input type="hidden" id="orderTs" />
+<input type="hidden" id="factAmount" value="-1"/>
+<input type="hidden" id="oriAmount" />
+<input type="hidden" id="showAmount" />
+<form id="depositForm" method="post" style="display: none;" action="/deposit/quickOrder.do">
+	<input id="passport" name="passport" /> <input id="gameId" name="gameId" value="" /> <input id="serverId" name="serverId"
+		value="" /> <input id="gameRoleId" name="gameRoleId" /> <input id="gameRoleName" name="gameRoleName" /> <input id="channelId"
+		name="channelId" /> <input id="payAmount" name="payAmount" /> <input id="choiceId" name="choiceId" /> <input id="coupon" name="coupon" /> <input
+		id="cardNum" name="cardNum" /> <input id="cardPsw" name="cardPsw" /> <input id="cellPhone" name="cellPhone" /> <input id="opParam" name="op"
+		value="561319DF17D44F8CB34FC1C80E85CDFA-6C7C5C1B8036E9319C70EB00F686F8254F0F16C2" /> <input id="code" name="code" value="bank" /> <input id="type" name="type" value="game" /> <input id="lobby" name="lobby" />
+	<input id="json_value" name="json" />
+</form>
+<table class="paymentTable">
+	
+			
+			<tr>
+				<th align="right" width="110" class="passportText" style="padding-top: 12px;">YY通行证：</th>
+				<td>
+					<div class="forFriends">
+						<input type="text" class="input" id="passport1" name="passport" onchange="setPassport();">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th align="right">确认YY通行证：</th>
+				<td><input type="text" class="input" id="passport2" name="passport" onchange="setPassport();" onpaste="return false" oncontextmenu="return false" oncopy="return false" oncut="return false">
+					<div class="errorTips important" style="display: none;" id="errorPst"></div>
+					<div class="errorTips important" style="display: none;" id="noLoginTip">您在未登录状态下充值，请仔细核对账号避免误充！</div></td>
+			</tr>
+		
+
+	<tr>
+		<th align="right">游戏/区服/角色：</th>
+		<td>
+			<div class="simSelect simSelectPop gameGroupSelect gameSelect" id="gameSelectDiv">
+				<p class="selected" id="gameChoose">请选择游戏</p>
+				<div class="items" id="gamebox">
+					<ul class="switch clearfix" id="gameDiv">
+						<li data="0" class="current">
+							<span>我最近玩过</span>
+						</li>
+						<li data="ABCD" id="noLoginGameTab">
+							<span>ABCD</span>
+						</li>
+						<li data="EFGH">
+							<span>EFGH</span>
+						</li>
+						<li data="IJKL">
+							<span>IJKL</span>
+						</li>
+						<li data="MNOP">
+							<span>MNOP</span>
+						</li>
+						<li data="QRST">
+							<span>QRST</span>
+						</li>
+						<li data="UVWX">
+							<span>UVWX</span>
+						</li>
+						<li data="YZ">
+							<span>YZ</span>
+						</li>
+					</ul>
+					<ul class="tabsContent tab-1 current" id="showGameDiv"></ul>
+				</div>
+			</div>
+			<div class="simSelect simSelectPop gameGroupSelect serverSelect" id="serverSelectDiv">
+				<p class="selected" id="serverChoose">请选择区服</p>
+				<div class="items" style="display: none" id="serverbox">
+					<ul class="switch clearfix" id="gsDiv"></ul>
+					<ul class="tabsContent tab-1 current" id="gsShowDiv"></ul>
+				</div>
+			</div>
+			<div class="simSelect simSelectDDN gameGroupSelect chapterSelect" id="nickNameSelectDiv" style="display: none">
+				<p class="selected" id="nickName">请选择角色</p>
+				<ul class="items dropDownGroup" id="nickNameDiv"></ul>
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<th align="right">充值金额：</th>
+		<td>
+			<div class="simRadio">
+				<ul class="recharge clearfix" id="choiceDiv">
+				</ul>
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<th align="right">游戏币：</th>
+		<td>
+			<div class="gameCurrency">
+				<span id="gameCoinAmount"></span>
+				
+			</div>
+		</td>
+	</tr>
+	
+			<tr>
+				<th align="right">选择银行：</th>
+				<td>
+					<div class="pruneShow">
+						<div class="simRadio" id="bankDiv">
+						</div>
+					</div>
+				</td>
+			</tr>
+		
+	
+	<tr>
+		<th align="right">实付金额：</th>
+		<td>
+			<div class="gameCurrency" id="factAmountDiv"></div>
+		</td>
+	</tr>
+	<tr>
+		<th align="right">优惠券：</th>
+		<td>
+			<div class="payForCoupon">
+				<label for="coupon" id="couponsTipDiv"></label>
+				<div class="couponContent" id="couponDiv">
+				</div>
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<th></th>
+		<td>
+			<button class="imgBtn largeBtn" onclick="submitToDeposit()">立即支付</button>
+			<p class="agreement">
+				<label> <div class='scheckbox' onclick="clickScheckbox(this);"><span class="checked" id="pactElm"></span></div>
+				</label>我已认真阅读《
+				<a href="../help/pact.do.html" target="_blank">多玩充值服务协议</a>
+				》
+			</p>
+		</td>
+	</tr>
+</table>
+
+			</div>
+		</div>
+	</div>
+	
+
+
+
+	<div id="footer">
+		<p>商务合作：张先生 联系电话：0756-3633220-826 联系QQ：2543028814 联系邮箱：gamebd@yy.com</p>
+		<p>关于欢聚| 欢聚招聘| 联系欢聚| YYgame页游厂商招募公告| 页游服务电话：0756-2680560    端游服务电话：0756-2680570</p>
+		<p>广州华多网络科技有限公司 版权所有 © 2005-2012 Duowan.com [多玩游戏]</p>
+		<p>粤B2-20050785| 粤ICP备09075143| 视听许可证1910441号| 粤网文[2012]0605-096号| 穗公网监备案证第4401060100548号</p>
+	</div>
+
+
+<div class="popup ordersFail" id="errMsgDiv">
+    <div class="caption">
+        <span class="close">X</span>提示
+    </div>
+    <div class="main">
+        <div class="wrap">
+            <h3 class="infoIcon" id="err_title"></h3>
+            <div class="bd" id="err_msg"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <button class="imgBtn greenBtn closePopup">关闭</button>
+    </div>
+</div>
+
+<div class="popup paySuccess" id="depositSuccess">
+    <div class="caption">
+        <span class="close">X</span> 提示
+    </div>
+    <div class="main">
+        <div class="wrap">
+            <h3 class="successIcon">恭喜您，充值成功！</h3>
+            <div class="bd">
+                <p>资金已成功充值到您的账户</p>
+                <p><a href="../account/index.do.html">查看交易明细</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="footer clearfix">
+        <button class="imgBtn greenBtn closePopup">确定</button>
+    </div>
+</div>
+
+<div class="popup payConfirm" id="depositConfirm">
+    <div class="caption">
+        <span class="close">X</span>订单支付
+    </div>
+    <div class="main">
+        <div class="panel">
+            <p id="confirmDetail"></p>
+            <p id="confirmAmount"></p>
+        </div>
+        <div class="importantTips">
+            <strong>请在新开页面完成后选择，</strong>充值完成前请不要关闭此窗口
+        </div>
+    </div>
+    <div class="footer">
+        <button class="imgBtn greenBtn" onclick="showLoading(false);">已完成</button>
+        <button class="imgBtn midBlueBtn" onclick="reOrder();">失败，重新支付</button>
+    </div>
+</div>
+
+<div class="popup waiting"  id="depositWaiting">
+    <div class="caption">
+        <span class="close">X</span>付款中
+    </div>
+    <div class="main">
+        <div class="wrap">
+            <div class="bd">
+                <div class="info">
+                    <p class="msg"><img src="../styles_v2/loading.gif" />自动检测中，请不要关闭此窗口</p>
+                    <p class="text">成功完成付款后将自动跳转，若未跳转，根据您的情况点击下面的按钮：</p>
+                    <hr>
+                    <dl>
+                        <dt>付款遇到问题</dt>
+                        <dd><a href="http://gm.duowan.com/user/issue/robot.do?product=YY_CZ&source=YY" target="_blank">咨询在线客服</a></dd>
+                        <dd><a href="http://www.yy.com/goto.html#12" target="_blank">VIP客服频道（服务时间9:30-18:30）</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+<script src="../js_v2/game_bank_min_v20150420.js"></script>
+
+<form style="display: none;" method="get" id="confirmDepositForm" action="/deposit/gotoOrder.do" target="_blank">
+	<input  type="hidden" id="timeParam" name="time" />
+	<input  type="hidden" id="pParam" name="p"/>
+</form>

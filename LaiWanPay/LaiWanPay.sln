@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaiWanPay", "LaiWanPay\LaiWanPay.csproj", "{A8D9C7F6-A88C-4E74-A73E-4471A41861AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaySubmit", "PaySubmit\PaySubmit.csproj", "{0DD5D1B8-3013-498D-983F-9B095EA70DCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8D9C7F6-A88C-4E74-A73E-4471A41861AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8D9C7F6-A88C-4E74-A73E-4471A41861AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8D9C7F6-A88C-4E74-A73E-4471A41861AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8D9C7F6-A88C-4E74-A73E-4471A41861AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DD5D1B8-3013-498D-983F-9B095EA70DCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DD5D1B8-3013-498D-983F-9B095EA70DCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DD5D1B8-3013-498D-983F-9B095EA70DCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DD5D1B8-3013-498D-983F-9B095EA70DCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

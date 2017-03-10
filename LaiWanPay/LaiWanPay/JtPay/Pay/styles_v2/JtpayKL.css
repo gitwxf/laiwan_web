@@ -1,0 +1,118 @@
+﻿.body {
+    width: 920px;
+    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #CCC;
+}
+
+.grid_panel {
+    border: solid 0px #DFDFDF;
+}
+
+    .grid_panel td, .grid_panel th {
+        border: solid 0px #DFDFDF;
+    }
+
+    .grid_panel .data_row {
+        background-color: transparent;
+    }
+
+#gameSubareaInfo, #gameSubareaInfo * {
+    font-size: 16px;
+    color: #CC0000;
+    line-height: 30px;
+}
+
+#payMethod table {
+    line-height: 26px;
+}
+
+#payMethod label {
+    margin-left: 2px;
+    margin-right: 10px;
+}
+
+.payMethodLabel {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    padding-left: 16px;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.data_region, #additionalRemark {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    line-height: 30px;
+    padding-left: 16px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    background-image: url(/Resources/Images/STM/bullet.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+#additionalRemark {
+}
+
+#rechargeReward b, #payMethod b {
+    color: #CC0000;
+}
+
+#actionDiv {
+    line-height: 40px;
+    text-align: right;
+}
+
+#rechargeCardDataForm, #otherRechargeDataForm, #waitDialog {
+    display: none;
+}
+
+    #waitDialog table {
+        border: none;
+        border-collapse: collapse;
+        border-spacing: 0px;
+        height: 120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+.paying, .pay_success, .pay_error {
+}
+
+.pay_success, .pay_error {
+    display: none;
+}
+
+.pay_msg {
+    font-size: 15px;
+}
+
+.paying .pay_icon {
+    background-image: url(/Resources/Images/ODM/loading.gif);
+    background-position: left center;
+    background-repeat: no-repeat;
+    width: 58px;
+}
+
+.pay_success .pay_icon {
+    background-image: url(/Resources/Images/ODM/yes.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    width: 58px;
+}
+
+.pay_error .pay_icon {
+    background-image: url(/Resources/Images/ODM/no.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    width: 58px;
+}
+
+.orderNo, .rechargeMoney, .exchangeSycee, .orderState, .gameSubarea {
+    font-weight: bold;
+    color: #CC0000;
+}

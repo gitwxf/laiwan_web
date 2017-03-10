@@ -1,0 +1,247 @@
+/***
+Login page
+***/
+
+body {
+	font-family: "å¾®è½¯é›…é»‘";
+	margin: 10px 0px 0px 0px !important;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: #346384;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+	color: #346384;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	color: #346384;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	color: #346384;
+}
+
+
+/* logo page */
+
+.login {
+	background: #2791ce url(../img/login-bg.png) no-repeat center top !important;
+}
+
+.login .logo {
+	width: 298px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.login .content {
+	width: 298px;
+	margin: 0 auto;
+	margin-bottom: 0px;
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+
+.login .content h3 {
+	color: #000;
+}
+
+.login .content h4 {
+	color: #555;
+}
+
+.login .content p {
+	color: #222;
+}
+
+.login .content .login-form,
+.login .content .forget-form {
+	padding: 0px;
+	margin: 0px;
+}
+
+.login .content .m-wrap {
+	width: 250px;
+}
+
+
+/*.login .content .input-icon {
+	border-left: 2px solid #35aa47 !important;
+}*/
+
+.login .content .control-group {
+	margin-bottom: 20px !important;
+	overflow: hidden;
+	margin-right: 0px !important;
+}
+
+.login .content .input-icon .m-wrap {
+	margin: 0px !important;
+	background: #6badd6;
+	border: 1px solid #0d93e2;
+	border-radius: 5px !important;
+	font-size: 20px;
+	line-height: normal;
+}
+
+.login .content .forget-form {
+	display: none;
+}
+
+.login .content .register-form {
+	display: none;
+}
+
+.login .content .form-title {
+	font-weight: bold;
+	margin: 0px;
+	color: #FFF;
+	text-align: center;
+	margin-top: 10px;
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+.login .content .form-actions {
+	clear: both;
+	border: 0px;
+	margin: 20px 0px 0px;
+	padding: 0px;
+	background-color: transparent;
+	width: 291px;
+	text-align: center;
+}
+
+/*.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn[disabled],
+.btn.disabled {
+	color: transparent !important;
+	background-color: transparent !important;
+}
+*/
+
+/*.login .content .forget-form .form-actions {
+	border: 0;
+	margin-bottom: 0;
+	padding-bottom: 20px;
+}
+
+.login .content .register-form .form-actions {
+	border: 0;
+	margin-bottom: 0;
+	padding-bottom: 0px;
+}
+
+.login .content .form-actions .checkbox {
+	margin-top: 8px;
+	display: inline-block;
+}*/
+
+.login .content .form-actions .btn {
+	margin-top: 1px;
+}
+
+.login .content .form-actions .loginBtn {
+	width: 180px;
+	height: 40px;
+	background: url(../img/login-btn.png) no-repeat center center;
+	background-size: 100%;
+	color: #4b5b93;
+	font-weight: bold;
+	font-size: 20px;
+}
+.login .content .form-actions .loginBtn:hover,
+.login .content .form-actions .loginBtn:focus,
+.login .content .form-actions .loginBtn:active,
+.login .content .form-actions .loginBtn.active,
+.login .content .form-actions .loginBtn[disabled],
+.login .content .form-actions .loginBtn.disabled {
+	color: #4b5b93!important;
+	background-color: transparent !important;
+}
+.login .content .forget-password {
+	margin-top: 25px;
+}
+
+.login .content .create-account {
+	border-top: 1px dotted #eee;
+	padding-top: 10px;
+	margin-top: 15px;
+}
+
+.login .content .create-account a {
+	display: inline-block;
+	margin-top: 5px;
+}
+
+.login .copyright {
+	text-align: center;
+	padding: 10px;
+	color: #104d70;
+	font-size: 13px;
+}
+
+#chkcode {
+	width: 152px;
+}
+
+@media (max-width: 979px) {
+	body {
+		margin: 90px 0px 0px 0px !important;
+	}
+}
+
+@media (max-width: 650px) {
+	body {
+		margin: 60px 0px 0px 0px !important;
+	}
+}
+
+@media (max-width: 400px) {
+	body {
+		margin: 30px 0px 0px 0px !important;
+	}
+	.login .content .m-wrap {
+		width: 181px;
+	}
+	#chkcode {
+		width: 82px;
+	}
+}
+
+@media (max-width: 480px) {
+	/***
+  Login page
+  ***/
+	.login .logo {
+		margin-top: 0px;
+	}
+	.login .content {
+		width: 222px;
+	}
+	.login .content .form-actions {
+		width: 222px;
+	}
+	.login .content h3 {
+		font-size: 30px;
+	}
+	.login .content .m-wrap {
+		width: 181px;
+	}
+	#chkcode {
+		width: 82px;
+	}
+}
+
+.login .checkbox {
+	font-size: 13px;
+}

@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <script type="text/javascript">
+        function PostSubmit() {
+            document.getElementById("form1").submit();            
+        }
+    </script>
+</head>
+<body onload="PostSubmit();">
+    <form id="form1" method="post" action="@ViewData["FormAction"]">
+        <input type="hidden" id="p1_usercode" name="p1_usercode" value="@ViewData["p1_usercode"]" />
+        <!--商户号-->
+        <input type="hidden" id="p2_order" name="p2_order" value="@ViewData["p2_order"]" />
+        <!--订单号-->
+        <input type="hidden" id="p3_money" name="p3_money" value="@ViewData["p3_money"]" />
+        <!--金额-->
+        <input type="hidden" id="p4_returnurl" name="p4_returnurl" value="@ViewData["p4_returnurl"]" />
+        <!--回掉界面-->
+        <input type="hidden" id="p5_notifyurl" name="p5_notifyurl" value="@ViewData["p5_notifyurl"]" />
+        <!--通知界面-->
+        <input type="hidden" id="p6_ordertime" name="p6_ordertime" value="@ViewData["p6_ordertime"]" />
+        <!--订单时间-->
+        <input type="hidden" id="p7_sign" name="p7_sign" value="@ViewData["p7_sign"]" />
+        <!--商户传递参数加密值-->
+        <input type="hidden" id="p8_signtype" name="p8_signtype" value="@ViewData["p8_signtype"]" />
+        <!--签名验证方式-->
+        <input type="hidden" id="p9_paymethod" name="p9_paymethod" value="@ViewData["p9_paymethod"]" />
+        <!--商户支付方式-->
+        <input type="hidden" id="p10_paychannelnum" name="p10_paychannelnum" value="@ViewData["p10_paychannelnum"]" />
+        <!--支付通道编码-->
+        <input type="hidden" id="p14_customname" name="p14_customname" value="@ViewData["p14_customname"]" />
+        <!--客户名称-->
+        <input type="hidden" id="p17_customip" name="p17_customip" value="@ViewData["p17_customip"]" />
+        <!--客户端IP-->
+        <input type="hidden" id="p18_product" name="p18_product" value="@ViewData["p18_product"]" />
+        <!--商品名称-->
+        <input type="hidden" id="p19_productcat" name="p19_productcat" value="@ViewData["p19_productcat"]" />
+        <!--卡密-->
+        <input type="hidden" id="p20_productnum" name="p20_productnum" value="@ViewData["p20_productnum"]" />
+        <!--卡号-->
+        <input type="hidden" id="p25_terminal" name="p25_terminal" value="@ViewData["p25_terminal"]" />
+        <!--终端设备-->
+        <input type="hidden" id="p26_iswappay" name="p26_iswappay" value="@ViewData["p26_iswappay"]" />
+        <!--支付场景-->
+    </form>
+</body>
+</html>
