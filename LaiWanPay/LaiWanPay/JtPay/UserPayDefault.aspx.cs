@@ -28,6 +28,10 @@ namespace LaiWanPay.JtPay
                         UserId = dt.Rows[0]["GameID"].ToString();
                         NickName = dt.Rows[0]["NickName"].ToString();
                         GameName = dt.Rows[0]["KindID"].ToString() == "826" ? "徕玩跑得快" : "徕玩麻将";
+                        if (NickName != "" && NickName.Length > 5)
+                        {
+                            NickName = NickName.Substring(0, 5) + "...";
+                        }
                     }
                     else
                     {

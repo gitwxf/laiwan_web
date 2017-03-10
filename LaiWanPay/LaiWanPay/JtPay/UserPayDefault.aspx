@@ -254,7 +254,7 @@
         <main>
             <div class="box form">
                 <div class="hint">
-                    <p style="font-size:16px;font-family:'Microsoft YaHei'">您当前绑定的游戏ID：<strong style="color:red;font-weight:bold;font-size:18px;"><%=UserId %></strong>，昵称：<strong style="color:red;font-weight:bold;font-size:18px;"><%=NickName %></strong>。<br />所属游戏：<strong style="color:red;font-weight:bold;font-size:18px;"><%=GameName %></strong>，确认为该帐号充值？&nbsp;&nbsp;<a id="change" href="javascript:;" class="btn radius l" style="line-height: 1.6em; margin-top: 3px;" onclick="changeaccount();">切换帐号</a></p>
+                    <p style="font-size:16px;font-family:'Microsoft YaHei'">游戏ID：<strong style="color:red;font-weight:bold;font-size:18px;"><%=UserId %></strong>(<strong style="color:red;font-weight:bold;font-size:18px;"><%=NickName %></strong>)&nbsp;<a id="change" href="javascript:;" class="btn radius l" style="line-height: 1.6em; margin-top: 3px;" onclick="changeaccount();">切换帐号</a></p>
                 </div>
             </div>
         </main>
@@ -269,9 +269,9 @@
             </div>
             <div class="box" style="padding-bottom: 0px;">
                 <ul class="commodity-area" id="ProductList">
-                    <li sumcard="5" huodong_card="0" price="10" class="active"><span class="unitPrice">充值10元</span><span class="send">获得5张房卡</span><span class="activitySend"></span></li>
-                    <li sumcard="10" huodong_card="0" price="20"><span class="unitPrice">充值20元</span><span class="send">获得10张房卡</span><span class="activitySend"></span></li>
-                    <li sumcard="15" huodong_card="0" price="30"><span class="unitPrice">充值30元</span><span class="send">获得15张房卡</span><span class="activitySend"></span></li>
+                    <li buy_card="5" huodong_card="0" sumcard="5" price="10" class="active"><span class="unitPrice">充值10元</span><span class="send">获得5张房卡</span><span class="activitySend"></span></li>
+                    <li buy_card="10" huodong_card="1" sumcard="11" price="20"><span class="unitPrice">充值20元</span><span class="send">获得10+1张房卡</span><span class="activitySend"></span></li>
+                    <li buy_card="25" huodong_card="3" sumcard="28" price="50"><span class="unitPrice">充值50元</span><span class="send">获得25+3张房卡</span><span class="activitySend"></span></li>
                 </ul>
             </div>
             <div class="box rechage-area">
@@ -296,7 +296,7 @@
                 $('#ProductList').delegate('li', 'click', function () {
                     $(this).addClass('active').siblings().removeClass('active');
                     if ($(this).attr('huodong_card') > 0) {
-                        $('#Description').text('购买' + $(this).find('.send').text() + ',活动送' + $(this).attr('huodong_card') + '张房卡');
+                        $('#Description').text('购买获得' + $(this).attr("buy_card") + '张房卡,活动送' + $(this).attr('huodong_card') + '张房卡,总' + $(this).attr("sumcard")+'张');
                     } else {
                         $('#Description').text('购买' + $(this).find('.send').text());
                     }

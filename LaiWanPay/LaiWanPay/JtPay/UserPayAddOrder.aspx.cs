@@ -15,7 +15,7 @@ namespace LaiWanPay.JtPay
         /// <summary>
         /// 充值金额
         /// </summary>
-        protected readonly IList<int> listPayValue = new List<int>() { 10, 20, 30 };
+        protected readonly IList<int> listPayValue = new List<int>() { 10, 20, 50 };
         /// <summary>
         /// 终端类型
         /// </summary>

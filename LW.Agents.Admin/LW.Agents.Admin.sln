@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LW.Agents.Web", "LW.Agents.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LW.Agents.Common", "LW.Agents.Common\LW.Agents.Common.csproj", "{1F75C770-4D20-469D-9A92-F5578D01C3C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LW.Agents.DBUtility", "LW.Agents.DBUtility\LW.Agents.DBUtility.csproj", "{8D9D08CB-CC0A-4668-AD5C-30FD3CE77EFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1F75C770-4D20-469D-9A92-F5578D01C3C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F75C770-4D20-469D-9A92-F5578D01C3C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F75C770-4D20-469D-9A92-F5578D01C3C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D9D08CB-CC0A-4668-AD5C-30FD3CE77EFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D9D08CB-CC0A-4668-AD5C-30FD3CE77EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D9D08CB-CC0A-4668-AD5C-30FD3CE77EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D9D08CB-CC0A-4668-AD5C-30FD3CE77EFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
