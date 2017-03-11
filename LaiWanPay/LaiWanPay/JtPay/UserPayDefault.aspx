@@ -270,8 +270,8 @@
             <div class="box" style="padding-bottom: 0px;">
                 <ul class="commodity-area" id="ProductList">
                     <li buy_card="5" huodong_card="0" sumcard="5" price="10" class="active"><span class="unitPrice">充值10元</span><span class="send">获得5张房卡</span><span class="activitySend"></span></li>
-                    <li buy_card="10" huodong_card="1" sumcard="11" price="20"><span class="unitPrice">充值20元</span><span class="send">获得10+1张房卡</span><span class="activitySend"></span></li>
-                    <li buy_card="25" huodong_card="3" sumcard="28" price="50"><span class="unitPrice">充值50元</span><span class="send">获得25+3张房卡</span><span class="activitySend"></span></li>
+                    <li buy_card="10" huodong_card="0" sumcard="11" price="20"><span class="unitPrice">充值20元</span><span class="send">获得11张房卡</span><span class="activitySend"></span></li>
+                    <li buy_card="25" huodong_card="0" sumcard="28" price="50"><span class="unitPrice">充值50元</span><span class="send">获得28张房卡</span><span class="activitySend"></span></li>
                 </ul>
             </div>
             <div class="box rechage-area">
