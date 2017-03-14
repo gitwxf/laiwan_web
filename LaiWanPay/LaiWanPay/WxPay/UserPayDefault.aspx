@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserPayDefault.aspx.cs" Inherits="LaiWanPay.JtPay.UserPayDefault" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserPayDefault.aspx.cs" Inherits="LaiWanPay.WxPay.UserPayDefault" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -221,7 +221,7 @@
             color: red;
         }
     </style>
-    <script src="js/jquery-1.10.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-1.10.1.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         function GetParamValue(paramName) {
             paramValue = "", isFound = !1;
@@ -284,8 +284,8 @@
                 <a id="reBtn" class="btn btn-success radius l" style="line-height: 1.6em; margin-top: 3px; width: 165px;" href="javascript:;">立即购买</a>
             </div>
         </main>
-        <script src="js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="js/bootbox.js" type="text/javascript"></script>
+        <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
+        <script src="Scripts/bootbox.js" type="text/javascript"></script>
         <script type="text/javascript">
             function changeaccount() {
                 window.location.href = "UserBindAccounts.aspx?OpenID=" + $("#hdOpenId").val();
@@ -313,13 +313,7 @@
                         alert("请选择购买房卡金额。");
                         return;
                     }
-                    var terminal = "androidwx";
-                    if (IsAndroid()) {
-                        terminal = "androidwx";
-                    } else {
-                        terminal = "ioswx";
-                    }
-                    window.location.href = "UserPayAddOrder.aspx?UserID=" + userId + "&PayMoney=" + payvalue + "&Terminal=" + terminal + "&t=" + new Date().getTime();
+                    window.location.href = "UserPayAddOrder.aspx?UserID=" + userId + "&PayMoney=" + payvalue + "&OpenID=" + $("#hdOpenId").val() + "&t=" + new Date().getTime();
                 });
             });
         </script>

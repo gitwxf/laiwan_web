@@ -147,8 +147,9 @@ namespace LaiWanPay.Business
         /// <param name="strattach">附加值</param>
         /// <param name="strOrderId">订单号</param>
         /// <param name="strTag">标记</param>
+        /// <param name="notifyUrl">回调通知地址</param>
         /// <returns></returns>
-        public WxPayData GetUnifiedOrderResult(string strDesc,string strattach,string strOrderId,string strTag)
+        public WxPayData GetUnifiedOrderResult(string strDesc,string strattach,string strOrderId,string strTag,string notifyUrl)
         {
             //统一下单
             WxPayData data = new WxPayData();
@@ -161,6 +162,7 @@ namespace LaiWanPay.Business
             data.SetValue("goods_tag", strTag);
             data.SetValue("trade_type", "JSAPI");
             data.SetValue("openid", openid);
+            data.SetValue("notify_url", notifyUrl);
 
             WxPayData result = WxPayApi.UnifiedOrder(data);
             if (!result.IsSet("appid") || !result.IsSet("prepay_id") || result.GetValue("prepay_id").ToString() == "")

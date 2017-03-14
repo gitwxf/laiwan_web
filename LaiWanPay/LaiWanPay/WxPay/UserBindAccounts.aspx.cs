@@ -7,7 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using LaiWanPay.Business;
 
-namespace LaiWanPay.JtPay
+namespace LaiWanPay.WxPay
 {
     public partial class UserBindAccounts : System.Web.UI.Page
     {

@@ -39,8 +39,9 @@ namespace LaiWanPay.Business
         /// <param name="totalPrice">订单总金额</param>
         /// <param name="productTag">商品标记</param>
         /// <param name="productId">商品ID</param>
+        /// <param name="notifyUrl">回调通知地址</param>
         /// <returns></returns>
-        public string GetPayUrl(string productDesc, string attach, string orderId, int totalPrice, string productTag, string productId)
+        public string GetPayUrl(string productDesc, string attach, string orderId, int totalPrice, string productTag, string productId, string notifyUrl)
         {
             Log.Info(this.GetType().ToString(), "Native pay mode 2 url is producing...");
 
@@ -54,6 +55,7 @@ namespace LaiWanPay.Business
             data.SetValue("goods_tag", productTag);//商品标记
             data.SetValue("trade_type", "NATIVE");//交易类型
             data.SetValue("product_id", productId);//商品ID
+            data.SetValue("notify_url", notifyUrl);//回调通知地址
 
             WxPayData result = WxPayApi.UnifiedOrder(data);//调用统一下单接口
             string url = result.GetValue("code_url").ToString();//获得统一下单接口返回的二维码链接

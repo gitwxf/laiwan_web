@@ -39,7 +39,8 @@ namespace LaiWanPay.WxPay
             string productDesc = "游戏房卡";
             string attach = strOrderId;
             string productTag = "";
-            string url = nativePay.GetPayUrl(productDesc, attach, strOrderId, intPayMoney, productTag, strPayMoney);
+            string notifyUrl = "http://pay.laiwan888.com/WxPay/ResultNotifyPage.aspx";
+            string url = nativePay.GetPayUrl(productDesc, attach, strOrderId, intPayMoney, productTag, strPayMoney, notifyUrl);
 
             ltOrderID.Text = strOrderId;
             ltPayMoney.Text = (intPayMoney / 100).ToString();

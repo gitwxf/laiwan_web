@@ -193,12 +193,21 @@
     <Content Include="WxPay\CSS\bootstrap.min.css" />
     <Content Include="WxPay\images\banner.png" />
     <Content Include="WxPay\images\laiwanewm.jpg" />
+    <Content Include="WxPay\images\wx.png" />
+    <Content Include="WxPay\images\yl.png" />
+    <Content Include="WxPay\images\zfb.png" />
     <Content Include="WxPay\MobileDefault.aspx" />
     <Content Include="WxPay\PayAddOrder.aspx" />
     <Content Include="WxPay\PayValidate.aspx" />
     <Content Include="WxPay\Scripts\bootbox.js" />
     <Content Include="WxPay\Scripts\bootstrap.min.js" />
     <Content Include="WxPay\Scripts\jquery-1.10.1.min.js" />
+    <Content Include="WxPay\UserBindAccounts.aspx" />
+    <Content Include="WxPay\UserIsBind.aspx" />
+    <Content Include="WxPay\UserJsApiPayPage.aspx" />
+    <Content Include="WxPay\UserPayAddOrder.aspx" />
+    <Content Include="WxPay\UserPayDefault.aspx" />
+    <Content Include="WxPay\UserPayResultNotifyPage.aspx" />
     <Content Include="WxPay\ValidateIsBind.aspx" />
     <None Include="Properties\PublishProfiles\LaiWanPayConfig.pubxml" />
     <None Include="Web.Debug.config">
@@ -237,6 +246,7 @@
     <Compile Include="Business\RefundQuery.cs" />
     <Compile Include="Business\ResultNotify.cs" />
     <Compile Include="Business\UserPayment.cs" />
+    <Compile Include="Business\UserPayResultNotify.cs" />
     <Compile Include="Common\WebConfigHelper.cs" />
     <Compile Include="DBUtility\LogUtils.cs" />
     <Compile Include="DBUtility\SqlHelper.cs" />
@@ -587,6 +597,48 @@
     </Compile>
     <Compile Include="WxPay\ResultNotifyPage.aspx.designer.cs">
       <DependentUpon>ResultNotifyPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\UserBindAccounts.aspx.cs">
+      <DependentUpon>UserBindAccounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\UserBindAccounts.aspx.designer.cs">
+      <DependentUpon>UserBindAccounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\UserIsBind.aspx.cs">
+      <DependentUpon>UserIsBind.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\UserIsBind.aspx.designer.cs">
+      <DependentUpon>UserIsBind.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\UserJsApiPayPage.aspx.cs">
+      <DependentUpon>UserJsApiPayPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\UserJsApiPayPage.aspx.designer.cs">
+      <DependentUpon>UserJsApiPayPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\UserPayAddOrder.aspx.cs">
+      <DependentUpon>UserPayAddOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\UserPayAddOrder.aspx.designer.cs">
+      <DependentUpon>UserPayAddOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\UserPayDefault.aspx.cs">
+      <DependentUpon>UserPayDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\UserPayDefault.aspx.designer.cs">
+      <DependentUpon>UserPayDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\UserPayResultNotifyPage.aspx.cs">
+      <DependentUpon>UserPayResultNotifyPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\UserPayResultNotifyPage.aspx.designer.cs">
+      <DependentUpon>UserPayResultNotifyPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="WxPay\ValidateIsBind.aspx.cs">
       <DependentUpon>ValidateIsBind.aspx</DependentUpon>

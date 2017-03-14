@@ -108,7 +108,6 @@ namespace LaiWanPay.WxPay
                         Response.Write("<span style='color:#FF0000;font-size:20px'>" + "充值金额错误，请确认。" + "</span>");
                         return;
                     }
-
                     //生成订单号
                     string orderId = WxPayApi.GenerateOutTradeNo();
                     //插入订单
@@ -118,7 +117,7 @@ namespace LaiWanPay.WxPay
                         Response.Write("<span style='color:#FF0000;font-size:20px'>" + "网络异常，请返回重试。" + "</span>");
                         return;
                     }
-                    string url = "JsApiPayPage.aspx?openid=" + openid + "&total_fee=" + (intPayMoney * 100) + "&orderId=" + orderId;
+                    string url = "JsApiPayPage.aspx?openid=" + openid + "&total_fee=" + (intPayMoney*100) + "&orderId=" + orderId;
                     //清除Session
                     if (CSession.Get("AgentsID") != null)
                     {

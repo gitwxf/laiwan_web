@@ -1,19 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Net;
-using System.IO;
-using System.Threading;
-using LitJson;
-using System.Web.Security;
-using LaiWanPay.lib;
 using LaiWanPay.Business;
+using LaiWanPay.lib;
 
 namespace LaiWanPay.WxPay
 {
-    public partial class JsApiPayPage : System.Web.UI.Page
+    public partial class UserJsApiPayPage : System.Web.UI.Page
     {
         public static string wxJsApiParam { get; set; } //H5调起JS API参数
         protected void Page_Load(object sender, EventArgs e)
@@ -42,7 +38,7 @@ namespace LaiWanPay.WxPay
                     string productDesc = "游戏房卡";
                     string attach = strOrderId;
                     string productTag = "";
-                    string notifyUrl = "http://pay.laiwan888.com/WxPay/ResultNotifyPage.aspx";
+                    string notifyUrl = "http://pay.laiwan888.com/WxPay/UserPayResultNotifyPage.aspx";
 
                     WxPayData unifiedOrderResult = jsApiPay.GetUnifiedOrderResult(productDesc, attach, strOrderId, productTag, notifyUrl);
 

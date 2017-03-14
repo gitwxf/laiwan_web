@@ -10,6 +10,6 @@
 namespace LaiWanPay.WxPay {
     
     
-    public partial class JsApiPayPage {
+    public partial class UserJsApiPayPage {
     }
 }
