@@ -4,7 +4,7 @@
 <head runat="server">
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/> 
-    <title>徕玩支付</title>
+    <title>徕玩游戏</title>
 </head>
            <script type="text/javascript">
                //调用微信JS api 支付
