@@ -13,7 +13,7 @@
     <meta http-equiv="expires" content="0" />
     <meta name="author" content="徕玩游戏:www.laiwan888.com" />
     <link href="CSS/bootstrap.min.css?t=112" rel="stylesheet" type="text/css" />
-    <title>购买房卡</title>
+    <title>购买道具房卡</title>
     <style type="text/css">
         * {
             margin: 0;

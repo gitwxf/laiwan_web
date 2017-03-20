@@ -255,7 +255,7 @@
 					<p style="color: red;font-weight:bold;">订单详情</p>
 					<p style="color: red;">订单号：<asp:Literal ID="ltOrderID" runat="server"/></p>
 					<p style="color: red;">支付金额：<asp:Literal ID="ltPayMoney" runat="server" Text="0"/>元</p>
-					<p style="color: red;">订单名称：购买房卡</p>
+					<p style="color: red;">订单名称：购买道具房卡</p>
 					<p style="color: red;">支付方式：微信扫码</p>
 				</div>
 			</div>

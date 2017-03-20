@@ -51,7 +51,7 @@ namespace LaiWanPay.WxPay
                     Response.Write("<span style='color:#000000;font-size:20px;font-weight:bold;'>订单详情：</span><br/>");
                     Response.Write("<span style='color:#D0BF4A;font-size:16px;'>订单编号：" + strOrderId + "</span><br/>");
                     Response.Write("<span style='color:#D0BF4A;font-size:16px;'>订单金额：" + (int.Parse(total_fee) / 100) + " 元</span><br/>");
-                    Response.Write("<span style='color:#D0BF4A;font-size:16px;'>订单描述：购买游戏房卡</span><br/>");
+                    Response.Write("<span style='color:#D0BF4A;font-size:16px;'>订单描述：购买道具房卡</span><br/>");
 
                 }
                 catch (Exception ex)
