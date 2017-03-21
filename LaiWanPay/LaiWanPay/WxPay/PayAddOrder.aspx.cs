@@ -16,7 +16,7 @@ namespace LaiWanPay.WxPay
         /// <summary>
         /// 充值金额
         /// </summary>
-        protected readonly IList<int> listPayValue = new List<int>() { 500, 1000, 2000 };
+        protected readonly IList<int> listPayValue = new List<int>() { 300, 500, 1000 };
 
         protected void Page_Load(object sender, EventArgs e)
         {
