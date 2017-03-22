@@ -231,14 +231,14 @@
 			</div>
 			<div class="box" style="padding-bottom: 0px;">
 				<ul class="commodity-area" id="ProductList">
-                    <li sumcard="750" huodong_card="0" price="500" class="active"><span class="unitPrice">充值500元</span><span class="send">获得750张房卡</span><span class="activitySend"></span></li>
-                    <li sumcard="1500" huodong_card="0" price="1000"><span class="unitPrice">充值1000元</span><span class="send">获得1500张房卡</span><span class="activitySend"></span></li>
-                    <li sumcard="3000" huodong_card="0" price="2000"><span class="unitPrice">充值2000元</span><span class="send">获得3000张房卡</span><span class="activitySend"></span></li>
+                    <li sumcard="360" huodong_card="0" price="300"><span class="unitPrice">充值300元</span><span class="send">获得360张房卡</span><span class="activitySend"></span></li>
+                    <li sumcard="650" huodong_card="0" price="500"><span class="unitPrice">充值500元</span><span class="send">获得650张房卡</span><span class="activitySend"></span></li>
+                    <li sumcard="1500" huodong_card="0" price="1000"  class="active"><span class="unitPrice">充值1000元</span><span class="send">获得1500张房卡</span><span class="activitySend"></span></li>
 				</ul>
 			</div>
 			<div class="box rechage-area">
-				<p id="Description">购买获得750张房卡</p>
-				<p class="rechage-money"><label>应付金额:</label> <asp:Label ID="AmountPayable" runat="server" style="color:#00CD00;" Text="500"></asp:Label> 元</p><input type="hidden" id="hdpaymoney" value="500" runat="server"/>
+				<p id="Description">购买获得1500张房卡</p>
+				<p class="rechage-money"><label>应付金额:</label> <asp:Label ID="AmountPayable" runat="server" style="color:#00CD00;" Text="1000"></asp:Label> 元</p><input type="hidden" id="hdpaymoney" value="1000" runat="server"/>
 			</div>
 			<div class="btn-ctrl">                
                 <asp:Button ID="Button1" runat="server" Text="立即充值" OnClientClick="return validate()" CssClass="btn btn-success radius l" style="line-height: 1.6em; margin-top: 3px; width: 165px;" OnClick="Button1_Click" />
