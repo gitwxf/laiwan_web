@@ -24,7 +24,6 @@ namespace LW.Agents.Common
                 //如果不存在该目录就创建该目录
                 if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "\\Logs\\"))
                 {
-
                     Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Logs\\");
                 }
 

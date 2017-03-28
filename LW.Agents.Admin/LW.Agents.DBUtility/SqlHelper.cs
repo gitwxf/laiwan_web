@@ -260,11 +260,6 @@ namespace LW.Agents.DBUtility
             return ExecuteNonQuery(connectionString, commandType, commandText, (SqlParameter[]) null);
         }
 
-        public static int ExecuteNonQuery(CommandType commandType, string commandText, params SqlParameter[] commandParameters)
-        {
-            //pass through the call providing null for the set of SqlParameters
-            return ExecuteNonQuery(Dbxjpgameweb, commandType, commandText, commandParameters);
-        }
 
         /// <summary>
         /// Execute a SqlCommand (that returns no resultset) against the database specified in the connection string 
@@ -279,8 +274,7 @@ namespace LW.Agents.DBUtility
         /// <param name="commandText">the stored procedure name or T-SQL command</param>
         /// <param name="commandParameters">an array of SqlParamters used to execute the command</param>
         /// <returns>an int representing the number of rows affected by the command</returns>
-        public static int ExecuteNonQuery(string connectionString, CommandType commandType, string commandText,
-                                          params SqlParameter[] commandParameters)
+        public static int ExecuteNonQuery(string connectionString, CommandType commandType, string commandText, params SqlParameter[] commandParameters)
         {
             //create & open a SqlConnection, and dispose of it after we are done.
             using (SqlConnection cn = new SqlConnection(connectionString))
@@ -432,13 +426,6 @@ namespace LW.Agents.DBUtility
         #endregion ExecuteNonQuery
 
         #region ExecuteDataSet
-
-        public static DataSet ExecuteDataset(CommandType commandType, string commandText, params SqlParameter[] commandParameters)
-        {
-            //pass through the call providing null for the set of SqlParameters
-            return ExecuteDataset(Dbxjpgameweb, commandType, commandText, commandParameters);
-        }
-
         /// <summary>
         /// Execute a SqlCommand (that returns a resultset and takes no parameters) against the database specified in 
         /// the connection string. 
@@ -610,12 +597,6 @@ namespace LW.Agents.DBUtility
         #endregion ExecuteDataSet
 
         #region ExecuteDataTable
-
-        public static DataTable ExecuteDataTable(CommandType commandType, string commandText)
-        {
-            return ExecuteDataTable(Dbxjpgameweb, commandType, commandText, (SqlParameter[]) null);
-        }
-
         /// <summary>
         /// Execute a SqlCommand (that returns a resultset and takes no parameters) against the database specified in 
         /// the connection string. 
@@ -633,20 +614,7 @@ namespace LW.Agents.DBUtility
             //pass through the call providing null for the set of SqlParameters
             return ExecuteDataTable(connectionString, commandType, commandText, (SqlParameter[]) null);
         }
-
-        public static DataTable ExecuteDataTable(CommandType commandType, string commandText,
-                                                 params SqlParameter[] commandParameters)
-        {
-            //create & open a SqlConnection, and dispose of it after we are done.
-            using (SqlConnection cn = new SqlConnection(Dbxjpgameweb))
-            {
-                cn.Open();
-
-                //call the overload that takes a connection in place of the connection string
-                return ExecuteDataTable(cn, commandType, commandText, commandParameters);
-            }
-        }
-
+        
         /// <summary>
         /// Execute a SqlCommand (that returns a resultset) against the database specified in the connection string 
         /// using the provided parameters.
@@ -867,20 +835,7 @@ namespace LW.Agents.DBUtility
             }
             return null;
         }
-
-        public static SqlDataReader ExecuteReader(CommandType commandType, string commandText)
-        {
-            //pass through the call providing null for the set of SqlParameters
-            return ExecuteReader(Dbxjpgameweb, commandType, commandText, (SqlParameter[]) null);
-        }
-
-        public static SqlDataReader ExecuteReader(CommandType commandType, string commandText,
-                                                  params SqlParameter[] commandParameters)
-        {
-            //pass through the call providing null for the set of SqlParameters
-            return ExecuteReader(Dbxjpgameweb, commandType, commandText, commandParameters);
-        }
-
+        
         /// <summary>
         /// Execute a SqlCommand (that returns a resultset and takes no parameters) against the database specified in 
         /// the connection string. 
@@ -1032,13 +987,7 @@ namespace LW.Agents.DBUtility
             //pass through the call providing null for the set of SqlParameters
             return ExecuteScalar(connectionString, commandType, commandText, (SqlParameter[]) null);
         }
-
-        public static object ExecuteScalar(CommandType commandType, string commandText,
-                                           params SqlParameter[] commandParameters)
-        {
-            //pass through the call providing null for the set of SqlParameters
-            return ExecuteScalar(Dbxjpgameweb, commandType, commandText, commandParameters);
-        }
+        
 
         /// <summary>
         /// Execute a SqlCommand (that returns a 1x1 resultset) against the database specified in the connection string 
@@ -1297,16 +1246,17 @@ namespace LW.Agents.DBUtility
         /// <summary>
         /// 分页查询
         /// </summary>
+        /// <param name="connectionString">连接字符串</param>
         /// <param name="cmdText">执行的sql</param>
         /// <param name="page">当前第几页</param>
         /// <param name="pageSize">每页显示多少条记录</param>
         /// <returns></returns>
-        public static DataTable DataTablePage(string cmdText, int page, int pageSize)
+        public static DataTable DataTablePage(string connectionString, string cmdText, int page, int pageSize)
         {
             try
             {
                 DataSet ds = new DataSet();
-                using (SqlConnection con = new SqlConnection(Dbxjpgameweb))
+                using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     SqlDataAdapter da = new SqlDataAdapter(cmdText, con);
                     if (page < 1)
