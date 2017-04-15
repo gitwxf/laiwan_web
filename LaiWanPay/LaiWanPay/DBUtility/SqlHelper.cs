@@ -11,8 +11,6 @@ namespace LaiWanPay.DBUtility
     /// </summary>
     public class SqlHelper
     {
-        //public static string ConnectionString = ConfigurationManager.ConnectionStrings["SQLConnString"].ConnectionString;
-
         #region private utility methods & constructors
 
         //Since this class provides only static methods, make the default constructor private to prevent 

@@ -191,6 +191,7 @@
     <Content Include="WxPay\AgentsNameConfirm.aspx" />
     <Content Include="WxPay\BindAccounts.aspx" />
     <Content Include="WxPay\CSS\bootstrap.min.css" />
+    <Content Include="WxPay\GetAuthorizeInfo.aspx" />
     <Content Include="WxPay\images\banner.png" />
     <Content Include="WxPay\images\laiwanewm.jpg" />
     <Content Include="WxPay\images\wx.png" />
@@ -499,6 +500,13 @@
     </Compile>
     <Compile Include="WxPay\DownloadBillpage.aspx.designer.cs">
       <DependentUpon>DownloadBillpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxPay\GetAuthorizeInfo.aspx.cs">
+      <DependentUpon>GetAuthorizeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPay\GetAuthorizeInfo.aspx.designer.cs">
+      <DependentUpon>GetAuthorizeInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="WxPay\JsApiPayPage.aspx.cs">
       <DependentUpon>JsApiPayPage.aspx</DependentUpon>
