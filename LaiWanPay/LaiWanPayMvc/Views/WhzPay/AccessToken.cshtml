@@ -1,0 +1,238 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>购买房卡</title>
+    <link href="~/CSS/bootstrap.min.css?t=112" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: "Microsoft YaHei", "微软雅黑", Helvetica, Arial, Tahoma;
+            font-size: 12px;
+            box-sizing: border-box;
+            color: #000;
+        }
+
+        header {
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000000;
+            background: #EEEEEE;
+            padding-left: 20px;
+        }
+
+        .cf:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .box {
+            padding: 10px;
+            border-bottom: 1px solid #CCC;
+        }
+
+        .form {
+            overflow: hidden;
+        }
+
+            .form label {
+                line-height: 30px;
+                float: left;
+                width: 85px;
+                padding: 0 5px;
+                text-align: right;
+                font-size: 16px;
+            }
+
+            .form span {
+                line-height: 30px;
+                float: left;
+                font-size: 14px;
+            }
+
+            .form input,
+            .form select {
+                padding: 0px 10px;
+                line-height: 26px;
+                height: 30px !important;
+                float: left;
+                width: 45%;
+                box-sizing: border-box;
+                margin-right: 3%;
+                font-size: 14px;
+                margin-bottom: 0px;
+            }
+
+            .form button {
+                padding: 0px 10px;
+                line-height: 26px;
+                float: left;
+                height: 30px;
+                width: 20%;
+                box-sizing: border-box;
+            }
+
+        .commodity-area {
+            overflow: hidden;
+            width: 100%;
+            margin: 0;
+        }
+
+            .commodity-area li {
+                float: left;
+                width: 32%;
+                border: 2px solid #CCC;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+                margin-right: 1.33%;
+                border-radius: 5px;
+            }
+
+                .commodity-area li.active {
+                    border: 2px solid #f00;
+                }
+
+                    .commodity-area li.active span {
+                        color: #f00;
+                    }
+
+                    .commodity-area li.active p {
+                        color: #f00;
+                        border-bottom: 1px solid #f00;
+                    }
+
+                .commodity-area li span,
+                .commodity-area li p {
+                    display: block;
+                    text-align: center;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .commodity-area li p {
+                    border-bottom: 1px solid #CCC;
+                    line-height: 22px;
+                    font-size: 13px;
+                }
+
+                .commodity-area li .props {
+                    font-size: 14px;
+                }
+
+                .commodity-area li .unitPrice {
+                    font-size: 18px;
+                }
+
+        .rechage-area p {
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0px;
+        }
+
+        .rechage-area .rechage-money,
+        .rechage-area .rechage-money label {
+            font-size: 16px;
+        }
+
+            .rechage-area .rechage-money label {
+                display: inline;
+            }
+
+            .rechage-area .rechage-money span {
+                font-size: 20px;
+            }
+
+        .btn-ctrl {
+            text-align: center;
+        }
+
+        button {
+            padding: 5px 25px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            color: #FFF;
+        }
+
+        .primary {
+            background: #1ab394;
+        }
+
+        .default {
+            background: #e6e6e6;
+        }
+
+        .rechage-area,
+        .btn-ctrl {
+            border-bottom: 0px;
+        }
+
+        .btn-ctrl {
+            margin-bottom: 20px;
+        }
+
+        .modal {
+            width: 60%;
+            left: 20%;
+            top: 20%;
+            margin-left: 0px;
+        }
+
+            .modal button {
+                width: auto;
+            }
+
+        .bootbox-body {
+            text-align: center;
+            font-size: 15px;
+            line-height: 26px;
+        }
+
+        .modal-footer {
+            text-align: center;
+        }
+
+        .hint p {
+            text-align: left;
+            color: #999;
+            margin: 0px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>购买房卡</header>
+<main>
+    <div class="box form">
+        <div class="hint">
+            <p style="color: red;">温馨提示：</p>
+            @if (ViewBag.Code == "-1")
+            {
+                <p style="color: red;">请您先下载游戏并登录一次再进行购买哦！</p>
+            }
+            else if (ViewBag.Code == "-2")
+            {
+                <p style="color: red;">获取微信授权信息出错，请稍后重试！</p>
+            }
+            else if (ViewBag.Code == "-3")
+            {
+                <p><img src="~/images/userpayprice.png" style="width: 100%;"/></p>
+                <p style="color: red;">您还未绑定代理账号，绑定代理账号购买房卡更优惠哦！</p>
+                <a class="btn btn-danger radius l" style="line-height: 1.6em; margin-top: 3px; width: 100px;" href="/WhzPay/PayDefault?uid=@ViewData["Uid"]&name=@ViewData["Name"]&openid=@ViewData["openid"]&unionid=@ViewData["unionid"]">不绑定</a>
+                <a class="btn btn-success radius r" style="line-height: 1.6em; margin-top: 3px; width: 100px;" href="/WhzPay/BindAgent?uid=@ViewData["Uid"]&name=@ViewData["Name"]&openid=@ViewData["openid"]&unionid=@ViewData["unionid"]">去绑定</a>
+            }
+        </div>
+    </div>
+</main>
+</body>
+</html>

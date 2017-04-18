@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>徕玩游戏</title>
+    <script type="text/javascript">
+        //调用微信JS api 支付
+        function jsApiCall() {
+            WeixinJSBridge.invoke('getBrandWCPayRequest', {
+                    "appId": "@ViewData["appId"]",
+                    "nonceStr": "@ViewData["nonceStr"]",
+                    "package": "@ViewData["package"]",
+                    "paySign": "@ViewData["paySign"]",
+                    "signType": "@ViewData["signType"]",
+                    "timeStamp": "@ViewData["timeStamp"]"
+                },
+                function(res) {
+                    WeixinJSBridge.log(res.err_msg);
+                    if (res.err_msg == "get_brand_wcpay_request:ok") {
+                        // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。
+                        document.body.innerHTML = "<span style='color:#FF0000;font-size:20px'>" + "支付完成" + "</span>。";
+                    } else if (res.err_msg == "get_brand_wcpay_request:cancel") {
+                        document.body.innerHTML = "<span style='color:#FF0000;font-size:20px'>" + "您取消了支付" + "</span>。";
+                    }
+                }
+            );
+        }
+        function callpay() {
+            if (typeof WeixinJSBridge == "undefined") {
+                if (document.addEventListener) {
+                    document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+                } else if (document.attachEvent) {
+                    document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+                    document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+                }
+            } else {
+                jsApiCall();
+            }
+        }
+    </script>
+    <script src="~/Scripts/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            callpay();
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
