@@ -46,7 +46,6 @@
                        jsApiCall();
                    }
                }
-               
      </script>
 
 <body onload="callpay();">

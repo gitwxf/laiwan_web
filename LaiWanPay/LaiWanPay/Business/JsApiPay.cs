@@ -25,6 +25,10 @@ namespace LaiWanPay.Business
         /// openid用于调用统一下单接口
         /// </summary>
         public string openid { get; set; }
+        /// <summary>
+        /// unionid
+        /// </summary>
+        public string unionid { get; set; }
 
         /// <summary>
         /// access_token用于获取收货地址js函数入口参数
@@ -129,8 +133,9 @@ namespace LaiWanPay.Business
 
                 //获取用户openid
                 openid = (string)jd["openid"];
+                unionid= (string)jd["unionid"];
 
-                Log.Debug(this.GetType().ToString(), "Get openid : " + openid);
+                Log.Debug(this.GetType().ToString(), "Get openid : " + openid+ " unionid："+ unionid);
                 Log.Debug(this.GetType().ToString(), "Get access_token : " + access_token);
             }
             catch (Exception ex)
