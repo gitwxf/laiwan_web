@@ -174,7 +174,7 @@
             success: function(data) {
                 if (data == "1") {
                     alert("绑定成功！");
-                    //location.href = "/WhzPay/PayBind?uid=" + uid + "&name=@ViewData["Name"]&openid=@ViewData["OpenId"]&unionid=@ViewData["UnionId"]&t=" + new Date().getTime();
+                    location.href = "/WhzPay/PayBind?uid=" + uid + "&name=@ViewData["Name"]&openid=@ViewData["OpenId"]&unionid=@ViewData["UnionId"]&t=" + new Date().getTime();
                 } else if (data == "-1") {
                     alert("数据获取失败！");
                 } else if (data == "-2") {

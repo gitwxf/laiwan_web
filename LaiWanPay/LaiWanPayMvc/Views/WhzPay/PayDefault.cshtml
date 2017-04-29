@@ -259,8 +259,7 @@
 <main>
     <div class="box form">
         <div class="hint">
-            <p style="font-size: 16px; font-family: 'Microsoft YaHei'">游戏ID：<strong style="color: red; font-weight: bold; font-size: 18px;">@ViewData["Uid"]</strong>(<strong style="color: red; font-weight: bold; font-size: 18px;">@ViewData["Name"]</strong>)
-            </p>
+            <p style="font-size: 16px; font-family: 'Microsoft YaHei'">游戏ID：<strong style="color: red; font-weight: bold; font-size: 18px;">@ViewData["Uid"]</strong>(<strong style="color: red; font-weight: bold; font-size: 18px;">@ViewData["Name"]</strong>)<a style="float: right;" href="/WhzPay/BindAgent?uid=@ViewData["Uid"]&name=@ViewData["Name"]&openid=@ViewData["OpenId"]&unionid=@ViewData["UnionId"]">绑定邀请码有活动哦！</a></p>
         </div>
     </div>
 </main>
