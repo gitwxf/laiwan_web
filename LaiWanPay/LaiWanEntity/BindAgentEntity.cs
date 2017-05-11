@@ -12,7 +12,7 @@ namespace LaiWanEntity
         /// uid，随机生user标识
         /// </summary>
         public string uid { get; set; }
-        public int agentid { get; set; }
+        public string agentid { get; set; }
         public string agentname { get; set; }
         public string addtime { get; set; }
     }

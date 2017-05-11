@@ -121,7 +121,7 @@ namespace LaiWanPayMvc.Controllers
                 BindAgentEntity agentEntity = new BindAgentEntity
                 {
                     uid = collection["uid"],
-                    agentid = Convert.ToInt32(dt.Rows[0]["id"]),
+                    agentid = Convert.ToString(dt.Rows[0]["id"]),
                     agentname = dt.Rows[0]["name"].ToString(),
                     addtime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
                 };
@@ -212,7 +212,7 @@ namespace LaiWanPayMvc.Controllers
                     var bindinfo = await this._bindAgent.FindManyAsync(x=>x.uid== UserID);
                     if (bindinfo != null && bindinfo.Count > 0)
                     {
-                        agentId=bindinfo[0].agentid;
+                        agentId=Convert.ToInt32(bindinfo[0].agentid);
                     }
                     //生成订单号
                     Random ran = new Random();

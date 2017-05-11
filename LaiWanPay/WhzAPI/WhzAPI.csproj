@@ -86,6 +86,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MongoDB.Driver, Version=2.0.1.27, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\MongoDB.Driver.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -166,6 +170,10 @@
     <ProjectReference Include="..\LaiWanBll\LaiWanBll.csproj">
       <Project>{5fc49819-cd0d-4e57-b12b-f0f72e85b930}</Project>
       <Name>LaiWanBll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LaiWanEntity\LaiWanEntity.csproj">
+      <Project>{faf1f683-ec29-4306-a7f6-89b2a50eab61}</Project>
+      <Name>LaiWanEntity</Name>
     </ProjectReference>
     <ProjectReference Include="..\LaiWanInterface\LaiWanInterface.csproj">
       <Project>{5ba5173c-fec1-43c6-9a6e-7bc349e39fc9}</Project>
