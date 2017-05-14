@@ -187,7 +187,7 @@ namespace LaiWanPayMvc.Controllers
         /// <summary>
         /// 充值金额
         /// </summary>
-        protected readonly IList<int> listPayValue = new List<int>() {10, 20, 30, 50, 100, 200};
+        protected readonly IList<int> listPayValue = new List<int>() {10, 20, 30, 60, 100, 200};
 
         /// <summary>
         /// 订单验证页面
