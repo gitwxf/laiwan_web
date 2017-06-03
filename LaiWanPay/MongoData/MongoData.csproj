@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapping\AddGoldFailMap.cs" />
     <Compile Include="Mapping\BindAgentEntityMap.cs" />
     <Compile Include="Mapping\UserInfoEntityMap.cs" />
     <Compile Include="MongoDbHandler.cs" />

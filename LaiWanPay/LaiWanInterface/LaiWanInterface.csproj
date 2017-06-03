@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAddGoldFailInfo.cs" />
     <Compile Include="IBindAgentEntity.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IUserInfoEntity.cs" />

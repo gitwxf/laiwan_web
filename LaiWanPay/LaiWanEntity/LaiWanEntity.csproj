@@ -47,8 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddGoldFailedInfo.cs" />
     <Compile Include="BindAgentEntity.cs" />
     <Compile Include="MongoEntity.cs" />
+    <Compile Include="PageAddFailInfo.cs" />
     <Compile Include="PageBaseEntity.cs" />
     <Compile Include="PageBindAgentEntity.cs" />
     <Compile Include="PageUserInfoEntity.cs" />

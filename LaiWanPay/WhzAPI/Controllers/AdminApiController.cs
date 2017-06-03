@@ -15,11 +15,13 @@ namespace WhzAPI.Controllers
     {
         private IUserInfoEntity _userInfoEntity;
         private IBindAgentEntity _bindAgent;
+        private IAddGoldFailInfo _addGoldFail;
 
-        public AdminApiController(IUserInfoEntity userInfo, IBindAgentEntity bindAgent)
+        public AdminApiController(IUserInfoEntity userInfo, IBindAgentEntity bindAgent, IAddGoldFailInfo addGoldFail)
         {
             _userInfoEntity = userInfo;
             _bindAgent = bindAgent;
+            _addGoldFail = addGoldFail;
         }
 
         /// <summary>
@@ -52,7 +54,7 @@ namespace WhzAPI.Controllers
                 pageIndex = 1;
             }
 
-            ArrayList asList=new ArrayList();
+            ArrayList asList = new ArrayList();
             if (agentid > 1000)
             {
                 var bindinfo = await this._bindAgent.FindManyAsync(x => x.agentid == agentid.ToString());
@@ -94,6 +96,41 @@ namespace WhzAPI.Controllers
                 pagetotal = (int)Math.Ceiling(Convert.ToDecimal(entity.TotalCount) / Convert.ToDecimal(pageSize));
             }
             return Json(new { pagetotal, totalcount = entity.TotalCount, userlist = entity.ListUserInfoEntity });
+        }
+
+
+
+        /// <summary>
+        /// 查询房卡添加失败记录
+        /// </summary>
+        /// <param name="uid"></param>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
+        public async Task<JsonResult> AddGoldFailInfoList(string uid = "", int pageIndex = 1, int pageSize = 10)
+        {
+            PageAddFailInfo entity = new PageAddFailInfo();
+
+            if (pageIndex < 1)
+            {
+                pageIndex = 1;
+            }
+
+            if (string.IsNullOrEmpty(uid))
+            {
+                entity = await this._addGoldFail.FindManyAsyncPage(x => x.uid == uid.ToString(), pageSize, (pageIndex - 1) * pageSize, "addDate", SortDirection.Descending);
+            }
+            else
+            {
+                entity = await this._addGoldFail.FindManyAsyncPage(x => true, pageSize, (pageIndex - 1) * pageSize, "addDate", SortDirection.Descending);
+            }
+
+            int pagetotal = 0;
+            if (entity.TotalCount > 0)
+            {
+                pagetotal = (int)Math.Ceiling(Convert.ToDecimal(entity.TotalCount) / Convert.ToDecimal(pageSize));
+            }
+            return Json(new { pagetotal, totalcount = entity.TotalCount, datalist = entity.ListAddGoldFailInfoEntity });
         }
     }
 }

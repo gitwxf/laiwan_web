@@ -27,6 +27,7 @@ namespace WhzAPI
             //注册 Service
             builder.RegisterType(typeof(UserInfoEntityService)).As(typeof(IUserInfoEntity));
             builder.RegisterType(typeof(BindAgentEntityService)).As(typeof(IBindAgentEntity));
+            builder.RegisterType(typeof(AddGoldFailInfoEntityService)).As(typeof(IAddGoldFailInfo));
             //注册 Controller 
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
             //创建容器

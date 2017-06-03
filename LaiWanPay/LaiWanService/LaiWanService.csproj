@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddGoldFailInfoEntityService.cs" />
     <Compile Include="BindAgentEntityService.cs" />
     <Compile Include="Comparer.cs" />
     <Compile Include="ListSorter.cs" />
