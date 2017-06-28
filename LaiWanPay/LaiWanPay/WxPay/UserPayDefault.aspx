@@ -215,7 +215,10 @@
             margin: 0px;
             padding-left: 10px;
         }
-
+        .activitySend {
+            font-size: 14px;
+            color: red;
+        }
         #ltUserID, #ltNickName, #ltGameName {
             font-weight: bold;
             color: red;
@@ -268,16 +271,19 @@
             </div>
             <div class="box" style="padding-bottom: 0px;">
                 <ul class="commodity-area" id="ProductList">
-                    <li buy_card="5" huodong_card="0" sumcard="5" price="10" class="active"><span class="unitPrice">充值10元</span><span class="send">获得5张房卡</span><span class="activitySend"></span></li>
-                    <li buy_card="10" huodong_card="0" sumcard="11" price="20"><span class="unitPrice">充值20元</span><span class="send">获得11张房卡</span><span class="activitySend"></span></li>
-                    <li buy_card="25" huodong_card="0" sumcard="28" price="50"><span class="unitPrice">充值50元</span><span class="send">获得28张房卡</span><span class="activitySend"></span></li>
+                    <li buy_card="4" huodong_card="0" sumcard="4" price="10"><span class="unitPrice">充值10元</span><span class="send">获得4张房卡</span><span class="activitySend">&nbsp;&nbsp;</span></li>
+                    <li buy_card="10" huodong_card="0" sumcard="10" price="20"><span class="unitPrice">充值20元</span><span class="send">获得10张房卡</span><span class="activitySend">&nbsp;&nbsp;</span></li>
+                    <li buy_card="20" huodong_card="0" sumcard="20" price="30"><span class="unitPrice">充值30元</span><span class="send">获得20张房卡</span><span class="activitySend">&nbsp;&nbsp;</span></li>
+                    <li buy_card="42" huodong_card="0" sumcard="42" price="60"><span class="unitPrice">充值60元</span><span class="send">获得42张房卡</span><span class="activitySend">&nbsp;&nbsp;</span></li>
+                    <li buy_card="100" huodong_card="0" sumcard="100" price="100" class="active"><span class="unitPrice">充值100元</span><span class="send">获得100张房卡</span><span class="activitySend">(活动赠送30张)</span></li>
+                    <li buy_card="220" huodong_card="0" sumcard="220" price="200"><span class="unitPrice">充值200元</span><span class="send">获得220张房卡</span><span class="activitySend">(活动赠送70张)</span></li>
                 </ul>
             </div>
             <div class="box rechage-area">
-                <p id="Description">购买获得5张房卡</p>
+                <p id="Description">购买获得100张房卡</p>
                 <p class="rechage-money">
                     <label>应付金额:</label>
-                    <span id="AmountPayable">10</span> 元
+                    <span id="AmountPayable">100</span> 元
                 </p>
             </div>
             <div class="btn-ctrl"><input runat="server" id="hdUserId" type="hidden"/><input runat="server" id="hdOpenId" type="hidden"/>
